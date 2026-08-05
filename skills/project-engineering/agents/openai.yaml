@@ -1,0 +1,4 @@
+interface:
+  display_name: "项目工程规范"
+  short_description: "遵循仓库规范完成安全、可验证且可提交的工程改动任务"
+  default_prompt: "使用 $project-engineering 按本项目工程规范完成当前任务。"
