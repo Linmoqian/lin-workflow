@@ -15,6 +15,7 @@ description: 按本仓库工程规范安全地实施代码、配置、文档、�
    * Python：[python.md](../../docs/development/python.md)
    * CMake：[cmake.md](../../docs/development/cmake.md)
    * Git：[git-workflow.md](../../docs/development/git-workflow.md)
+   * GitHub：[github.md](../../docs/development/github.md)
    * 验证：[verification.md](../../docs/development/verification.md)
 3. 查找当前目录及子目录中的更具体规范；其优先级高于通用规范。
 

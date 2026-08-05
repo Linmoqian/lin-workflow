@@ -104,6 +104,7 @@
 * 不提交无关文件、敏感文件、构建产物、临时文件或未验证内容。
 * Git 提交遵循 Conventional Commits，使用简洁中文描述，不包含任何暗示由 AI 生成的字样。
 * 推送远程仓库必须取得工程师明确同意。
+* 涉及 GitHub 构建、推送、PR、发行时遵循 [GitHub 规范](docs/development/github.md)。
 
 详细规则见 [Git 工作流](docs/development/git-workflow.md)。
 
@@ -142,6 +143,7 @@
 * [Python 开发](docs/development/python.md)
 * [CMake](docs/development/cmake.md)
 * [Git 工作流](docs/development/git-workflow.md)
+* [GitHub 规范](docs/development/github.md)
 * [验证](docs/development/verification.md)
 
 命名优先遵循项目现有规范。JavaScript、TypeScript 使用 `camelCase` 与 `PascalCase`；Python 使用 `snake_case`、`PascalCase` 与 `UPPER_SNAKE_CASE`；C、C++ 无现成约定时，不在单次任务中自行建立新命名体系。
