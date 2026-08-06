@@ -25,6 +25,53 @@
 - 暂不引入 RTK Query；出现远程 HTTP API 后再评估。
 - 不使用传统手写 Redux、Redux Saga 或 Redux Observable。
 
+## 目录与职责
+
+前端代码按以下职责组织；仅在实际需要时创建对应目录：
+
+```text
+app/src/
+├── components/
+│   └── common/
+├── features/
+│   └── <feature>/
+│       ├── components/
+│       ├── hooks/
+│       ├── services/
+│       ├── store/
+│       └── types.ts
+├── layouts/
+├── routes/
+├── services/
+├── store/
+├── styles/
+└── utils/
+```
+
+- `routes` 中的页面只负责页面组装，不堆积业务实现。
+- UI、异步调用、数据转换和状态管理应按职责放入组件、Hooks、服务或 Store。
+- 依赖方向保持为 feature 指向 `components/common` 或基础库层；共用层不得反向依赖 feature。
+- 组件在跨两个以上功能稳定复用后，才提升到 `components/common`；不得仅因外观相似提前抽象。
+- 不包装每个 Ant Design 组件；仅在需要统一行为、主题或业务语义时封装。
+
+## 样式复用
+
+- 全局样式仅包含重置、字体、主题和应用级规则。
+- 组件样式使用同名 CSS Module，并与组件就近存放。
+- 颜色、间距、圆角和阴影优先使用 Ant Design Design Token。
+- 禁止用全局选择器影响其他模块。
+- 重复的视觉结构优先提取共用组件，不堆积到全局样式文件。
+
+## 文件规模
+
+- React 组件文件目标不超过 200 行。
+- 超过 250 行必须拆分，或说明不能拆分的原因。
+- 超过 400 行原则上禁止；生成文件、静态数据和类型声明除外。
+- 单个组件或函数目标不超过 100 行。
+- 一个文件只保留一个主要组件；小型私有子组件可以例外。
+- 同一文件混合 UI、异步调用、数据转换和状态管理时，必须按职责拆分。
+- ESLint 的 `max-lines` 和 `max-lines-per-function` 设为 `warning`，用于提示拆分，不作为机械阻断条件。
+
 ## 命名
 
 - 变量和函数使用 `camelCase`。

@@ -10,4 +10,5 @@
 - [x] 确认 Lucide React 图标选型
 - [x] 确认 Ant Design 与样式选型
 - [x] 确认 Redux Toolkit 状态管理选型
+- [x] 补充前端模块化与文件规模规范
 - [ ] 确认前端技术选型

@@ -23,6 +23,15 @@ npm create tauri-app@latest
     - 暂不引入 RTK Query，仅在接入远程 HTTP API 后评估
     - 禁止使用传统手写 Redux、Redux Saga 和 Redux Observable
 
+- 前端模块化遵循 [详细规范](docs/development/frontend.md)：
+
+    - 页面只负责组装；UI、业务逻辑、异步调用与状态管理按职责拆分
+    - 仅跨两个以上功能稳定复用的组件进入共用组件；通用层不得反向依赖 feature
+    - 全局样式仅包含重置、字体、主题和应用级规则；组件样式使用 CSS Modules
+    - 组件文件目标不超过 200 行；超过 250 行须拆分或说明原因；超过 400 行原则上禁止，生成文件、静态数据和类型声明除外
+    - 单个组件或函数目标不超过 100 行
+    - 后续 ESLint 的 `max-lines` 与 `max-lines-per-function` 设为 warning
+
 - 测试方案需与工程师确认后选型
 
 - 禁用浏览器默认右键菜单，采用自定义菜单栏
