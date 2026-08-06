@@ -48,6 +48,13 @@ npm create tauri-app@latest
 
 - 前端自动化测试使用 Vitest、React Testing Library、`@testing-library/user-event`、`@testing-library/jest-dom` 和 jsdom，不使用 Playwright
 
+- 代码注释遵循 [详细规范](docs/development/code-comments.md)：
+
+    - 注释保持少而必要，解释原因、约束、风险与取舍，不重复翻译代码
+    - 公共 API 使用对应语言的文档注释，并准确描述契约与失败条件
+    - `TODO`、`FIXME` 必须说明原因和可执行的后续条件
+    - 禁止保留大段被注释掉的代码；修改行为时同步更新相关注释
+
 - 禁用浏览器默认右键菜单，采用自定义菜单栏
 - 隐藏视觉滚动条，但保留鼠标滚轮、触控板和键盘滚动能力
 - 采用无边框自定义标题栏，至少提供拖拽、双击最大化或还原、最小化、最大化或还原、关闭功能

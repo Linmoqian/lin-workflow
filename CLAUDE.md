@@ -25,6 +25,7 @@
 * 采用满足需求的最简单方案，不扩大范围，不为一次性需求或未来扩展增加抽象。
 * 只修改与任务直接相关的内容，不顺手重构、格式化或清理无关代码。
 * 遵循现有架构与代码风格；只清理本次改动产生的孤立代码。
+* 注释应解释原因、约束与风险，不重复翻译代码行为。
 * 发现无关问题时可以汇报，但不得擅自修改。
 
 ### 根目录结构
@@ -147,6 +148,7 @@
 * [Git 工作流](docs/development/git-workflow.md)
 * [GitHub 规范](docs/development/github.md)
 * [验证](docs/development/verification.md)
+* [代码注释](docs/development/code-comments.md)
 
 命名优先遵循项目现有规范。JavaScript、TypeScript 使用 `camelCase` 与 `PascalCase`；Python 使用 `snake_case`、`PascalCase` 与 `UPPER_SNAKE_CASE`；C、C++ 无现成约定时，不在单次任务中自行建立新命名体系。
 
