@@ -20,6 +20,7 @@ description: 按本仓库工程规范安全地实施代码、配置、文档、�
    * GitHub：[github.md](../../docs/development/github.md)
    * 验证：[verification.md](../../docs/development/verification.md)
    * 代码注释：[code-comments.md](../../docs/development/code-comments.md)
+   * 并发与线程：[concurrency.md](../../docs/development/concurrency.md)
 3. 查找当前目录及子目录中的更具体规范；其优先级高于通用规范。
 
 ## 根目录布局

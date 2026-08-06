@@ -26,6 +26,7 @@
 * 只修改与任务直接相关的内容，不顺手重构、格式化或清理无关代码。
 * 遵循现有架构与代码风格；只清理本次改动产生的孤立代码。
 * 注释应解释原因、约束与风险，不重复翻译代码行为。
+* 默认使用单线程；仅按实际需求或测量结果引入有界并发，异步不等同于多线程。
 * 发现无关问题时可以汇报，但不得擅自修改。
 
 ### 根目录结构
@@ -149,6 +150,7 @@
 * [GitHub 规范](docs/development/github.md)
 * [验证](docs/development/verification.md)
 * [代码注释](docs/development/code-comments.md)
+* [并发与线程](docs/development/concurrency.md)
 
 命名优先遵循项目现有规范。JavaScript、TypeScript 使用 `camelCase` 与 `PascalCase`；Python 使用 `snake_case`、`PascalCase` 与 `UPPER_SNAKE_CASE`；C、C++ 无现成约定时，不在单次任务中自行建立新命名体系。
 
