@@ -15,7 +15,7 @@
 - 图标使用 Lucide React，不引入 Ant Design Icons。
 - 自定义标题栏等桌面专属组件自行封装。
 - 状态管理使用 Redux Toolkit。
-- 测试方案尚未确认，不得自行选定或引入。
+- 前端自动化测试使用 Vitest、React Testing Library、`@testing-library/user-event`、`@testing-library/jest-dom` 和 jsdom，不使用 Playwright。
 
 ## 状态管理
 
@@ -84,6 +84,16 @@ app/src/
 - 涉及跨组件事件、复杂状态流、桌面容器通信或难以直接定位的问题时，可设置轻量调试信息总线，将必要信息发送到浏览器调试端。
 - 简单页面或现有日志机制已足够时，直接复用现有能力。
 - 调试逻辑不得污染业务逻辑，发布前应移除临时输出或按项目约定关闭。
+
+## 自动化测试
+
+- Vitest 作为测试运行器，jsdom 提供浏览器 DOM 环境。
+- React Testing Library 以用户可观察的行为查询和操作界面；`user-event` 模拟点击、输入和键盘交互，`jest-dom` 提供语义化 DOM 断言。
+- 测试文件与被测模块就近存放，命名为 `*.test.ts` 或 `*.test.tsx`。
+- 组件测试覆盖渲染、用户交互和可见状态变化；Hooks、工具函数和状态逻辑按公开行为进行单元测试。
+- Tauri IPC 使用 `vi.mock` 隔离；真实前后端联调不属于前端单元测试范围。
+- 不测试组件内部实现细节，不滥用快照；仅在稳定且审查价值明确时使用快照。
+- 本地开发使用 `npm run test` 进入监听模式，CI 使用 `npm run test:run` 单次执行；对应脚本分别约定为 `vitest` 和 `vitest run`。
 
 ## 桌面窗口与交互
 

@@ -46,7 +46,7 @@ npm create tauri-app@latest
     - Rust 变更会重新编译并重启应用，不得假定进程内状态能够保留
     - 后端重启后，前端必须能恢复 IPC 调用、订阅和必要状态
 
-- 测试方案需与工程师确认后选型
+- 前端自动化测试使用 Vitest、React Testing Library、`@testing-library/user-event`、`@testing-library/jest-dom` 和 jsdom，不使用 Playwright
 
 - 禁用浏览器默认右键菜单，采用自定义菜单栏
 - 隐藏视觉滚动条，但保留鼠标滚轮、触控板和键盘滚动能力
