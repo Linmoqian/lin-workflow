@@ -14,7 +14,16 @@
 - 样式使用 Ant Design Design Token 和 CSS Modules，不使用 Tailwind CSS。
 - 图标使用 Lucide React，不引入 Ant Design Icons。
 - 自定义标题栏等桌面专属组件自行封装。
-- 状态管理和测试方案尚未确认，不得自行选定或引入。
+- 状态管理使用 Redux Toolkit。
+- 测试方案尚未确认，不得自行选定或引入。
+
+## 状态管理
+
+- 组件局部状态优先使用 `useState` 或 `useReducer`。
+- 仅将跨页面、跨组件的工作流状态纳入 Redux Toolkit。
+- Rust 后端是业务数据的事实来源，前端避免维护与其冲突的状态副本。
+- 暂不引入 RTK Query；出现远程 HTTP API 后再评估。
+- 不使用传统手写 Redux、Redux Saga 或 Redux Observable。
 
 ## 命名
 

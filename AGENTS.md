@@ -15,7 +15,15 @@ npm create tauri-app@latest
 
 - 样式使用 Ant Design Design Token + CSS Modules，不引入 Ant Design Icons 和 Tailwind CSS
 - 自定义标题栏等桌面专属组件自行封装
-- 状态管理和测试方案需与工程师确认后选型
+- 状态管理使用 Redux Toolkit：
+
+    - 组件或页面局部状态优先使用 React `useState` 或 `useReducer`
+    - 仅跨页面、跨组件的工作流状态进入 Redux Toolkit
+    - Rust 后端是业务数据的事实来源，前端不维护与其冲突的副本
+    - 暂不引入 RTK Query，仅在接入远程 HTTP API 后评估
+    - 禁止使用传统手写 Redux、Redux Saga 和 Redux Observable
+
+- 测试方案需与工程师确认后选型
 
 - 禁用浏览器默认右键菜单，采用自定义菜单栏
 - 隐藏视觉滚动条，但保留鼠标滚轮、触控板和键盘滚动能力

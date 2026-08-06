@@ -9,4 +9,5 @@
 - [x] 确认 React Router 路由选型
 - [x] 确认 Lucide React 图标选型
 - [x] 确认 Ant Design 与样式选型
+- [x] 确认 Redux Toolkit 状态管理选型
 - [ ] 确认前端技术选型
