@@ -6,11 +6,11 @@ npm create tauri-app@latest
 ```
 
 - 使用生成器选择 React + TypeScript + Vite 模板，采用 TypeScript + Rust 技术路线
-- React 前端按需安装成熟依赖，不重复造车轮；动画库使用 Motion，路由库使用 React Router，图标库选型需与工程师确认：
+- React 前端按需安装成熟依赖，不重复造车轮；动画库使用 Motion，路由库使用 React Router，图标库使用 Lucide React：
 
     - motion
     - React Router
-    - 图标库
+    - Lucide React
 
 - 禁用浏览器默认右键菜单，采用自定义菜单栏
 - 隐藏视觉滚动条，但保留鼠标滚轮、触控板和键盘滚动能力

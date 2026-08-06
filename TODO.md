@@ -7,4 +7,5 @@
 - [x] 补充 GitHub 构建、推送与发行规范
 - [x] 完善前端基础规范
 - [x] 确认 React Router 路由选型
+- [x] 确认 Lucide React 图标选型
 - [ ] 确认前端技术选型
