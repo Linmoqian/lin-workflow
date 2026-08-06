@@ -10,8 +10,11 @@
 
 - 动画使用 Motion。
 - 路由使用 React Router。
-- 图标使用 Lucide React。
-- 样式、UI 组件、状态管理和测试方案尚未确认，不得自行选定或引入。
+- UI 组件使用 Ant Design。
+- 样式使用 Ant Design Design Token 和 CSS Modules，不使用 Tailwind CSS。
+- 图标使用 Lucide React，不引入 Ant Design Icons。
+- 自定义标题栏等桌面专属组件自行封装。
+- 状态管理和测试方案尚未确认，不得自行选定或引入。
 
 ## 命名
 
