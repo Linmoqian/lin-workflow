@@ -6,6 +6,12 @@
 - JavaScript 和 TypeScript 代码遵循 Airbnb JavaScript Style Guide，并使用项目已有的 ESLint、Prettier 配置。
 - 保持组件边界清晰、状态流向可追踪；不为一次性需求或未来扩展提前设计复杂抽象。
 
+## 技术选型
+
+- 动画使用 Motion。
+- 路由使用 React Router。
+- 图标、样式、状态管理和测试方案尚未确认，不得自行选定或引入。
+
 ## 命名
 
 - 变量和函数使用 `camelCase`。
