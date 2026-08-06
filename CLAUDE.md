@@ -31,7 +31,7 @@
 
 * `app/`：项目主体代码。
 * `docs/`：开发文档、开发日志和开发规范。
-* `tests/`：测试代码。
+* `tests/`：跨技术栈测试和验收测试；语言工具链约定的测试可放在对应 crate 或模块内，例如 Rust Cargo 集成测试放在 `app/src-tauri/tests/`。
 * 新增文件应按上述结构放置；迁移、重命名或删除现有目录前必须取得工程师同意。
 
 ## 3. 工作区与已有改动保护
@@ -140,6 +140,8 @@
 ## 14. 专题规范
 
 * [前端开发](docs/development/frontend.md)
+* [Rust 开发](docs/development/rust.md)
+* [前后端热加载](docs/development/hot-reload.md)
 * [Python 开发](docs/development/python.md)
 * [CMake](docs/development/cmake.md)
 * [Git 工作流](docs/development/git-workflow.md)

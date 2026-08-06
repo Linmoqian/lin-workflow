@@ -32,6 +32,20 @@ npm create tauri-app@latest
     - 单个组件或函数目标不超过 100 行
     - 后续 ESLint 的 `max-lines` 与 `max-lines-per-function` 设为 warning
 
+- Rust 与 Tauri 遵循 [详细规范](docs/development/rust.md)：
+
+    - `main.rs`、`lib.rs` 和 command 保持精简，领域逻辑不得依赖 Tauri
+    - 可失败操作返回 `Result`，生产路径禁止随意使用 `unwrap`、`expect` 或 `panic!`
+    - 不得跨 `await` 持有锁；阻塞任务与异步执行器隔离
+    - capabilities、permissions、文件访问和外部命令遵循最小权限与输入校验
+    - 提交前执行项目支持范围内的 `cargo fmt --check`、`cargo clippy` 和 `cargo test`
+
+- 前后端热加载遵循 [详细规范](docs/development/hot-reload.md)：
+
+    - 统一使用 `npm run tauri dev`，由 Vite 提供前端 HMR，由 Tauri 监视 Rust 代码
+    - Rust 变更会重新编译并重启应用，不得假定进程内状态能够保留
+    - 后端重启后，前端必须能恢复 IPC 调用、订阅和必要状态
+
 - 测试方案需与工程师确认后选型
 
 - 禁用浏览器默认右键菜单，采用自定义菜单栏
