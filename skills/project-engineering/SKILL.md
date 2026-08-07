@@ -21,12 +21,14 @@ description: 按本仓库工程规范安全地实施代码、配置、文档、�
    * 验证：[verification.md](../../docs/development/verification.md)
    * 代码注释：[code-comments.md](../../docs/development/code-comments.md)
    * 并发与线程：[concurrency.md](../../docs/development/concurrency.md)
+   * 接口文档：[api-documentation.md](../../docs/development/api-documentation.md)
 3. 查找当前目录及子目录中的更具体规范；其优先级高于通用规范。
 
 ## 根目录布局
 
 * `app/` 存放项目主体代码。
 * `docs/` 存放开发文档、开发日志和开发规范。
+* `docs/api/` 按需存放实际接口文档，没有接口时不创建空目录。
 * `tests/` 存放跨技术栈测试和验收测试；语言工具链测试放在对应 crate 或模块内。
 * 新增文件应遵循上述布局；不创建空目录。
 * 迁移或重命名现有目录前，必须先获得工程师同意。

@@ -33,8 +33,10 @@
 
 * `app/`：项目主体代码。
 * `docs/`：开发文档、开发日志和开发规范。
+* `docs/api/`：按需存放实际接口文档；没有接口时不创建空目录。
 * `tests/`：跨技术栈测试和验收测试；语言工具链约定的测试可放在对应 crate 或模块内，例如 Rust Cargo 集成测试放在 `app/src-tauri/tests/`。
 * 新增文件应按上述结构放置；迁移、重命名或删除现有目录前必须取得工程师同意。
+* 接口契约发生变化时，应在同一提交中同步更新实现、类型、测试和对应接口文档。
 
 ## 3. 工作区与已有改动保护
 
@@ -151,6 +153,7 @@
 * [验证](docs/development/verification.md)
 * [代码注释](docs/development/code-comments.md)
 * [并发与线程](docs/development/concurrency.md)
+* [接口文档](docs/development/api-documentation.md)
 
 命名优先遵循项目现有规范。JavaScript、TypeScript 使用 `camelCase` 与 `PascalCase`；Python 使用 `snake_case`、`PascalCase` 与 `UPPER_SNAKE_CASE`；C、C++ 无现成约定时，不在单次任务中自行建立新命名体系。
 
