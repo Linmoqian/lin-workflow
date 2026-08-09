@@ -19,3 +19,4 @@
 - [x] 补充并发与线程规范
 - [x] 补充接口文档格式规范
 - [x] 同步 AGENTS 与 CLAUDE
+- [x] 整理 md-to-latex Skill
