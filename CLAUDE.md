@@ -34,6 +34,7 @@
 * `app/`：项目主体代码。
 * `docs/`：开发文档、开发日志和开发规范。
 * `docs/api/`：按需存放实际接口文档；没有接口时不创建空目录。
+* `skills/`：项目可复用的 Codex Skill。
 * `tests/`：跨技术栈测试和验收测试；语言工具链约定的测试可放在对应 crate 或模块内，例如 Rust Cargo 集成测试放在 `app/src-tauri/tests/`。
 * 新增文件应按上述结构放置；迁移、重命名或删除现有目录前必须取得工程师同意。
 * 接口契约发生变化时，应在同一提交中同步更新实现、类型、测试和对应接口文档。
@@ -134,6 +135,7 @@
 * 绿色表示成功，黄色表示警告，红色表示错误，青色表示交互，蓝色表示高亮和链接，灰色表示次要信息。
 * 报告类 Markdown 应结构清晰、图文并茂但不堆砌装饰；普通技术说明以清晰为先。
 * LaTeX 使用 XeLaTeX 编译，中文内容注意字体、编码和跨平台兼容性。
+* 技术文档、报告、Markdown 与 PDF 交付遵循 [写作规范](docs/development/writing.md)；需要 LaTeX 专项流程时使用项目 `writing-standard` Skill。
 
 ## 13. 子代理
 
@@ -151,6 +153,7 @@
 * [Git 工作流](docs/development/git-workflow.md)
 * [GitHub 规范](docs/development/github.md)
 * [验证](docs/development/verification.md)
+* [写作](docs/development/writing.md)
 * [代码注释](docs/development/code-comments.md)
 * [并发与线程](docs/development/concurrency.md)
 * [接口文档](docs/development/api-documentation.md)

@@ -1,0 +1,4 @@
+interface:
+  display_name: "通用写作规范"
+  short_description: "统一技术文档、Markdown 与 XeLaTeX/PDF 写作流程"
+  default_prompt: "使用 $writing-standard 按项目写作规范完成当前文档任务。"
