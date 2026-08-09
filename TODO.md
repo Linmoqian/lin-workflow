@@ -21,3 +21,4 @@
 - [x] 同步 AGENTS 与 CLAUDE
 - [x] 整理 md-to-latex Skill
 - [x] 创建通用写作规范 Skill
+- [x] 补充写作文档目录管理
