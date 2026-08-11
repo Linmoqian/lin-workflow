@@ -13,6 +13,7 @@ description: 按本仓库工程规范安全地实施代码、配置、文档、�
 2. 根据任务只读取必要的专题规范：
    * 前端：[frontend.md](../../docs/development/frontend.md)
    * Rust：[rust.md](../../docs/development/rust.md)
+   * HarmonyOS：[harmonyos.md](../../docs/development/harmonyos.md)
    * 前后端热加载：[hot-reload.md](../../docs/development/hot-reload.md)
    * Python：[python.md](../../docs/development/python.md)
    * CMake：[cmake.md](../../docs/development/cmake.md)

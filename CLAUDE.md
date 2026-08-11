@@ -147,6 +147,7 @@
 
 * [前端开发](docs/development/frontend.md)
 * [Rust 开发](docs/development/rust.md)
+* [HarmonyOS 开发](docs/development/harmonyos.md)
 * [前后端热加载](docs/development/hot-reload.md)
 * [Python 开发](docs/development/python.md)
 * [CMake](docs/development/cmake.md)

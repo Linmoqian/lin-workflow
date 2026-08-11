@@ -22,3 +22,4 @@
 - [x] 整理 md-to-latex Skill
 - [x] 创建通用写作规范 Skill
 - [x] 补充写作文档目录管理
+- [x] 补充 HarmonyOS 开发规范
