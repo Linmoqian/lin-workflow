@@ -5,25 +5,25 @@ description: 按本仓库工程规范安全地实施代码、配置、文档、�
 
 # 项目工程规范
 
-使用本 Skill 完成仓库内的工程改动。将仓库根目录视为本文件的两级父目录。
+使用本 Skill 完成仓库内的工程改动。将仓库根目录视为本文件的三级父目录。
 
 ## 读取规范
 
-1. 先完整读取 [主规范](../../CLAUDE.md)。
+1. 先完整读取 [主规范](../../../CLAUDE.md)。
 2. 根据任务只读取必要的专题规范：
-   * 前端：[frontend.md](../../docs/development/frontend.md)
-   * Rust：[rust.md](../../docs/development/rust.md)
-   * HarmonyOS：[harmonyos.md](../../docs/development/harmonyos.md)
-   * 前后端热加载：[hot-reload.md](../../docs/development/hot-reload.md)
-   * Python：[python.md](../../docs/development/python.md)
-   * CMake：[cmake.md](../../docs/development/cmake.md)
-   * Git：[git-workflow.md](../../docs/development/git-workflow.md)
-   * GitHub：[github.md](../../docs/development/github.md)
-   * 验证：[verification.md](../../docs/development/verification.md)
-   * 写作：[writing.md](../../docs/development/writing.md)
-   * 代码注释：[code-comments.md](../../docs/development/code-comments.md)
-   * 并发与线程：[concurrency.md](../../docs/development/concurrency.md)
-   * 接口文档：[api-documentation.md](../../docs/development/api-documentation.md)
+   * 前端：[frontend.md](../../../docs/development/frontend.md)
+   * Rust：[rust.md](../../../docs/development/rust.md)
+   * HarmonyOS：[harmonyos.md](../../../docs/development/harmonyos.md)
+   * 前后端热加载：[hot-reload.md](../../../docs/development/hot-reload.md)
+   * Python：[python.md](../../../docs/development/python.md)
+   * CMake：[cmake.md](../../../docs/development/cmake.md)
+   * Git：[git-workflow.md](../../../docs/development/git-workflow.md)
+   * GitHub：[github.md](../../../docs/development/github.md)
+   * 验证：[verification.md](../../../docs/development/verification.md)
+   * 写作：[writing.md](../../../docs/development/writing.md)
+   * 代码注释：[code-comments.md](../../../docs/development/code-comments.md)
+   * 并发与线程：[concurrency.md](../../../docs/development/concurrency.md)
+   * 接口文档：[api-documentation.md](../../../docs/development/api-documentation.md)
 3. 查找当前目录及子目录中的更具体规范；其优先级高于通用规范。
 
 ## 根目录布局
@@ -31,7 +31,7 @@ description: 按本仓库工程规范安全地实施代码、配置、文档、�
 * `app/` 存放项目主体代码。
 * `docs/` 存放开发文档、开发日志和开发规范。
 * `docs/api/` 按需存放实际接口文档，没有接口时不创建空目录。
-* `skills/` 存放项目可复用的 Codex Skill。
+* `.pi/skills/` 存放项目可复用的 Skill（pi-subagents 格式）。
 * `tests/` 存放跨技术栈测试和验收测试；语言工具链测试放在对应 crate 或模块内。
 * 新增文件应遵循上述布局；不创建空目录。
 * 迁移或重命名现有目录前，必须先获得工程师同意。
@@ -43,7 +43,7 @@ description: 按本仓库工程规范安全地实施代码、配置、文档、�
 3. 先复用项目已有实现、依赖、包管理器、测试和构建流程；只有在确有必要时新增依赖或工具。
 4. 采用最小可验证改动，不顺手重构、升级无关依赖或扩展需求。
 5. 根据改动类型执行相应验证，并如实记录实际结果。
-6. 修改 [TODO.md](../../TODO.md)：任务完成后标记完成，不删除历史事项。
+6. 修改 [TODO.md](../../../TODO.md)：任务完成后标记完成，不删除历史事项。
 7. 精准暂存本次文件，检查暂存差异后创建一个语义清晰的本地提交；未经工程师明确同意不得推送。
 
 ## 决策边界
