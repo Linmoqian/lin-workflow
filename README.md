@@ -10,7 +10,7 @@
 
 以下为提示词：
 
-"使用Git 拉取 https://github.com/Linmoqian/lin-workflow ，然后将其工程规范接入到本项目中，合并而非替换，README和TODO不纳入"
+"使用Git 拉取 https://github.com/Linmoqian/lin-workflow ，然后将其工程规范接入到本项目中，合并而非替换，README和TODO不纳入；其中 skills/ 下的 Skill 需复制到本工具的技能加载目录（Codex 为 .agents/skills/，Claude Code 为 .claude/skills/），否则不会被自动加载"
 
 # 补充
 

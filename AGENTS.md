@@ -34,7 +34,7 @@
 * `app/`：项目主体代码。
 * `docs/`：开发文档、开发日志和开发规范。
 * `docs/api/`：按需存放实际接口文档；没有接口时不创建空目录。
-* `skills/`：项目可复用的 Codex Skill。
+* `skills/`：项目可复用的 Codex Skill 源目录；接入其他项目时需复制到该工具对应的技能加载目录（Codex 为 `.agents/skills/`，Claude Code 为 `.claude/skills/`）。
 * `tests/`：跨技术栈测试和验收测试；语言工具链约定的测试可放在对应 crate 或模块内，例如 Rust Cargo 集成测试放在 `app/src-tauri/tests/`。
 * 新增文件应按上述结构放置；迁移、重命名或删除现有目录前必须取得工程师同意。
 * 接口契约发生变化时，应在同一提交中同步更新实现、类型、测试和对应接口文档。
