@@ -1,0 +1,35 @@
+#!/bin/sh
+set -eu
+
+message_file=${1:-}
+if [ -z "$message_file" ] || [ ! -f "$message_file" ]; then
+  echo "[错误] 未找到 Git 提交信息文件。" >&2
+  exit 1
+fi
+
+meaningful_lines=$(awk '!/^[[:space:]]*#/ && NF { print }' "$message_file")
+line_count=$(printf '%s\n' "$meaningful_lines" | awk 'NF { count += 1 } END { print count + 0 }')
+
+if [ "$line_count" -ne 1 ]; then
+  echo "[错误] 提交信息必须只有一行有效内容，并用一句话概括唯一目的。" >&2
+  echo "[提示] 格式示例：docs(git): 补充 Git 钩子" >&2
+  exit 1
+fi
+
+first_line=$(printf '%s\n' "$meaningful_lines" | sed -n '1p')
+if ! printf '%s\n' "$first_line" | grep -Eq '^(feat|fix|docs|refactor|test|build|ci|chore)(\([^)]{1,32}\))?: .+'; then
+  echo "[错误] 提交信息必须符合 Conventional Commits：<type>(<scope>): <一句话中文描述>。" >&2
+  exit 1
+fi
+
+if ! printf '%s\n' "$first_line" | grep -Eq '[一-龥]'; then
+  echo "[错误] 提交描述必须使用中文。" >&2
+  exit 1
+fi
+
+if printf '%s\n' "$first_line" | grep -Eiq '(^|[^[:alnum:]])AI([^[:alnum:]]|$)|人工智能|自动生成|模型身份|大语言模型'; then
+  echo "[错误] 提交信息不得提及 AI、自动生成或模型身份。" >&2
+  exit 1
+fi
+
+exit 0

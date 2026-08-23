@@ -45,3 +45,18 @@ fix(window): 修复无边框窗口拖拽失效
 - 创建或切换分支、变基、合并等操作不得擅自扩大任务范围。
 - 推送会改变远程状态，必须取得用户明确同意后执行。
 - 未获同意时，工作在本地提交处结束，并汇报提交结果与待推送分支。
+
+## Git 提交钩子
+
+- 项目钩子位于 `.githooks/`，包含：
+  - `pre-commit`：检查暂存区空白错误、疑似敏感文件，以及 `AGENTS.md` 与 `CLAUDE.md` 的一致性。
+  - `commit-msg`：检查 Conventional Commits、单行一句话描述和禁止的 AI 生成字样。
+- 克隆仓库后，在 PowerShell 中运行：
+
+```powershell
+& .\.githooks\setup.ps1
+```
+
+- 启用脚本只修改当前仓库的 `core.hooksPath`，不会修改全局 Git 配置；提交前必须确认 `git config --local --get core.hooksPath` 返回 `.githooks`。
+- 钩子失败时必须修复问题后重新提交；除工程师明确授权的紧急情况外，禁止使用 `git commit --no-verify` 绕过检查。
+- 钩子只能阻止可机械判定的错误，不能替代代码 Review、测试、构建和人工安全判断。

@@ -38,6 +38,7 @@
 * `docs/`：开发文档、开发日志和开发规范。
 * `docs/api/`：按需存放实际接口文档；没有接口时不创建空目录。
 * `docs/review/`：按日期存放代码 Review 检查报告；没有 Review 报告时不创建空目录。
+* `.githooks/`：版本控制的 Git 提交钩子；克隆仓库后先运行其 `setup.ps1` 启用。
 * `skills/`：项目可复用的 Skill（pi-subagents 格式，位于 `.pi/skills/`）。
 * `tests/`：跨技术栈测试和验收测试；语言工具链约定的测试可放在对应 crate 或模块内，例如 Rust Cargo 集成测试放在 `app/src-tauri/tests/`。
 * `.pi/agents/`：项目级子代理定义（Markdown + YAML frontmatter），参见 [子代理使用规范](docs/development/subagents.md)。
@@ -117,6 +118,7 @@
 * 提交前必须能够准确区分本次改动与已有改动，并完成最小验证。
 * 不提交无关文件、敏感文件、构建产物、临时文件或未验证内容。
 * Git 提交遵循 Conventional Commits；提交信息必须使用一句话高度概括本次提交的唯一目的，使用简洁中文描述，不包含任何暗示由 AI 生成的字样。
+* Git 提交前必须启用并通过项目 `.githooks/` 钩子；除工程师明确授权的紧急情况外，不得使用 `--no-verify` 绕过钩子。
 * 推送远程仓库必须取得工程师明确同意。
 * 涉及 GitHub 构建、推送、PR、发行时遵循 [GitHub 规范](docs/development/github.md)。
 

@@ -48,3 +48,4 @@
 - [x] 补充成熟社区开源方案探索规范
 - [x] 接入 Context7 CLI 文档查询规范
 - [x] 接入 MinerU 文档解析与 SciVerse 学术检索规范
+- [x] 建立 Git 提交钩子

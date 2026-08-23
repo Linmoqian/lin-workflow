@@ -1,0 +1,23 @@
+#!/bin/sh
+set -eu
+
+if ! git diff --cached --check; then
+  echo "[错误] 暂存区存在空白字符或冲突标记问题。" >&2
+  exit 1
+fi
+
+forbidden_files=$(git diff --cached --name-only \
+  | grep -Ei '(^|/)(\.env($|\.)|.*\.(pem|key|p12|pfx)$|id_(rsa|dsa|ecdsa|ed25519)(\..*)?$|credentials(\..*)?$|secrets(\..*)?$)' \
+  | grep -Eiv '(^|/)\.env\.(example|sample|template)$' || true)
+if [ -n "$forbidden_files" ]; then
+  echo "[错误] 暂存区包含疑似敏感文件：" >&2
+  printf '%s\n' "$forbidden_files" >&2
+  exit 1
+fi
+
+if [ -f AGENTS.md ] && [ -f CLAUDE.md ] && ! cmp -s AGENTS.md CLAUDE.md; then
+  echo "[错误] AGENTS.md 与 CLAUDE.md 内容不一致。" >&2
+  exit 1
+fi
+
+exit 0
