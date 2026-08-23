@@ -37,6 +37,7 @@
 
 * `app/`：项目主体代码。
 * `docs/`：开发文档、开发日志和开发规范。
+* `docs/wiki/`：GitHub Wiki 的 Git 子模块挂载点；仅在 Wiki 仓库地址确认后创建，不创建空目录或占位子模块。
 * `docs/api/`：按需存放实际接口文档；没有接口时不创建空目录。
 * `docs/review/`：按日期存放代码 Review 检查报告；没有 Review 报告时不创建空目录。
 * `.githooks/`：版本控制的 Git 提交钩子；克隆仓库后先运行其 `setup.ps1` 启用。
