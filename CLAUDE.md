@@ -82,8 +82,11 @@
 * 查询库、框架、API、配置和版本差异时，优先尝试 Context7 CLI：先用 `ctx7 library <库名> "<具体问题>"` 解析准确库 ID，再用 `ctx7 docs <库 ID> "<具体问题>"` 查询，优先选择与项目锁定版本匹配的文档。
 * Context7 CLI 提示需要认证或 API Key 时，应暂停该次 Context7 查询并向工程师请求；不得猜测、硬编码、提交或在日志中暴露 API Key。工程师未提供时，改用官方文档、官方源码、类型定义、示例和发行说明等备选路径，并说明未使用 Context7。
 * Context7 返回内容只作为检索上下文，最终以官方文档、官方源码及类型定义、构建测试和实际验证为准；Context7 不可用或信息不足时，依次使用上述官方资料，再参考高质量社区资料。
+* 文档解析与格式转换：PDF、扫描件、Office、多栏排版、表格、公式和图表等复杂文档优先使用 [MinerU 官方 API](https://mineru.net/apiManage/docs)，按官方当前限制选择精准解析或 Agent 轻量解析，并按需导出 Markdown、JSON、DOCX、HTML 或 LaTeX；简单文本或 MinerU 不可用时再使用 MarkItDown 等现有工具。
+* 学术文献检索优先使用 [SciVerse](https://sciverse.opendatalab.com/docs) 的检索和全文证据接口；记录查询语句、文献标识、标题、证据片段、来源位置、评分、版本和检索时间，关键结论仍需核验原始来源。
+* MinerU 或 SciVerse 提示需要 Token/API Key、权限不足或配额不可用时，应向工程师请求；不得猜测、硬编码、提交、输出或在日志中暴露密钥。上传文档前确认数据授权、隐私和版权边界。
 * 不因某个特定工具不可用而停止任务。
-* 读取文档时优先使用 MarkItDown，例如 `markitdown input.pdf > output.md`；不可用时使用能保真读取内容的现有工具。
+* 读取简单文本或 Markdown 时可直接读取；MinerU 不适用或不可用时，使用 MarkItDown，例如 `markitdown input.pdf > output.md`，再按内容类型选择能保真读取内容的现有工具。
 * 页面验证优先使用项目已有测试或验证脚本；默认不截图进行验证，没有可用脚本时提供可复现的手动步骤，并如实说明未完成自动化验证的范围。
 
 ## 6. Windows 兼容性
