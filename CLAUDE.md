@@ -34,6 +34,7 @@
 * `app/`：项目主体代码。
 * `docs/`：开发文档、开发日志和开发规范。
 * `docs/api/`：按需存放实际接口文档；没有接口时不创建空目录。
+* `docs/review/`：按日期存放代码 Review 检查报告；没有 Review 报告时不创建空目录。
 * `skills/`：项目可复用的 Skill（pi-subagents 格式，位于 `.pi/skills/`）。
 * `tests/`：跨技术栈测试和验收测试；语言工具链约定的测试可放在对应 crate 或模块内，例如 Rust Cargo 集成测试放在 `app/src-tauri/tests/`。
 * `.pi/agents/`：项目级子代理定义（Markdown + YAML frontmatter），参见 [子代理使用规范](docs/development/subagents.md)。
@@ -159,6 +160,7 @@
 * [Git 工作流](docs/development/git-workflow.md)
 * [GitHub 规范](docs/development/github.md)
 * [验证](docs/development/verification.md)
+* [代码 Review](docs/development/code-review.md)
 * [写作](docs/development/writing.md)
 * [代码注释](docs/development/code-comments.md)
 * [并发与线程](docs/development/concurrency.md)

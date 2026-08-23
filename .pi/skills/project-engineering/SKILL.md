@@ -20,6 +20,7 @@ description: 按本仓库工程规范安全地实施代码、配置、文档、�
    * Git：[git-workflow.md](../../../docs/development/git-workflow.md)
    * GitHub：[github.md](../../../docs/development/github.md)
    * 验证：[verification.md](../../../docs/development/verification.md)
+   * 代码 Review：[code-review.md](../../../docs/development/code-review.md)
    * 写作：[writing.md](../../../docs/development/writing.md)
    * 代码注释：[code-comments.md](../../../docs/development/code-comments.md)
    * 并发与线程：[concurrency.md](../../../docs/development/concurrency.md)
@@ -31,6 +32,7 @@ description: 按本仓库工程规范安全地实施代码、配置、文档、�
 * `app/` 存放项目主体代码。
 * `docs/` 存放开发文档、开发日志和开发规范。
 * `docs/api/` 按需存放实际接口文档，没有接口时不创建空目录。
+* `docs/review/` 按日期存放代码 Review 检查报告，没有 Review 报告时不创建空目录。
 * `.pi/skills/` 存放项目可复用的 Skill（pi-subagents 格式）。
 * `tests/` 存放跨技术栈测试和验收测试；语言工具链测试放在对应 crate 或模块内。
 * 新增文件应遵循上述布局；不创建空目录。
