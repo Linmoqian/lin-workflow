@@ -21,6 +21,7 @@ description: 按本仓库工程规范安全地实施代码、配置、文档、�
    * GitHub：[github.md](../../../docs/development/github.md)
    * 验证：[verification.md](../../../docs/development/verification.md)
    * 代码 Review：[code-review.md](../../../docs/development/code-review.md)
+   * 日志与终端输出：[logging.md](../../../docs/development/logging.md)
    * 写作：[writing.md](../../../docs/development/writing.md)
    * 代码注释：[code-comments.md](../../../docs/development/code-comments.md)
    * 并发与线程：[concurrency.md](../../../docs/development/concurrency.md)

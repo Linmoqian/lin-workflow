@@ -161,6 +161,7 @@
 * [GitHub 规范](docs/development/github.md)
 * [验证](docs/development/verification.md)
 * [代码 Review](docs/development/code-review.md)
+* [日志与终端输出](docs/development/logging.md)
 * [写作](docs/development/writing.md)
 * [代码注释](docs/development/code-comments.md)
 * [并发与线程](docs/development/concurrency.md)
