@@ -23,3 +23,5 @@ http://localhost:8080/overview/
 ## 后续 Agent 更新约束
 
 Agent 应重新读取代码、Git、测试、构建和文档后更新 `.overview/*.json`，并记录 `snapshot.json` 的观测提交、工作区状态、来源覆盖度和未知项。页面只负责展示，不应被当作数据库直接编辑。
+
+完整维护流程见 [项目地图维护规范](../docs/development/project-overview-maintenance.md)。

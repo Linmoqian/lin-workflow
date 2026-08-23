@@ -27,3 +27,4 @@
 - [x] 定制项目级子代理（.pi/agents）
 - [x] 新增 docs/development/subagents.md 规范
 - [x] 创建项目数字孪生 Overview 示例工程
+- [x] 新增项目地图维护规范文档

@@ -122,6 +122,8 @@
 * `MEMORY.md` 只记录长期有效的架构决策、技术约束和流程，不记录临时任务、密钥、账号、私人路径、个人信息或敏感部署信息。
 * 正式架构决策应进入 ADR 或设计文档，不用 `MEMORY.md` 代替。
 
+* 项目数字孪生 Overview 的维护遵循 [项目地图维护规范](docs/development/project-overview-maintenance.md)：Agent 只能根据代码、Git、测试、构建、文档和人工决策更新 `.overview/*.json`，不得直接把 HTML 当数据库；所有完成结论必须有当前快照和验收证据支撑。
+
 ## 11. 敏感文件
 
 * 密钥、Token、密码、私钥、账号、内部地址和本地专属配置不得提交，应按项目现状纳入 `.gitignore`。
@@ -160,6 +162,7 @@
 * [代码注释](docs/development/code-comments.md)
 * [并发与线程](docs/development/concurrency.md)
 * [接口文档](docs/development/api-documentation.md)
+* [项目地图维护](docs/development/project-overview-maintenance.md)
 * [子代理使用](docs/development/subagents.md)
 
 命名优先遵循项目现有规范。JavaScript、TypeScript 使用 `camelCase` 与 `PascalCase`；Python 使用 `snake_case`、`PascalCase` 与 `UPPER_SNAKE_CASE`；C、C++ 无现成约定时，不在单次任务中自行建立新命名体系。
