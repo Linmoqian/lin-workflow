@@ -18,7 +18,7 @@
 5. 当前目录及子目录中的更具体规范
 6. 相关接口、测试、构建和架构文档
 
-按变更内容选择专题规范，至少覆盖适用的前端、Rust、HarmonyOS、Python、CMake、并发、接口、日志、验证、Git、GitHub、项目地图和写作规范。不得只凭记忆或代码风格印象完成 Review。
+按变更内容选择专题规范，至少覆盖适用的前端、C++、嵌入式、Rust、HarmonyOS、Python、CMake、并发、接口、日志、验证、Git、GitHub、项目地图和写作规范。不得只凭记忆或代码风格印象完成 Review。
 
 ## 3. Review 流程
 

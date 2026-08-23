@@ -12,6 +12,8 @@ description: 按本仓库工程规范安全地实施代码、配置、文档、�
 1. 先完整读取 [主规范](../../../CLAUDE.md)。
 2. 根据任务只读取必要的专题规范：
    * 前端：[frontend.md](../../../docs/development/frontend.md)
+   * C++：[cpp.md](../../../docs/development/cpp.md)
+   * 嵌入式：[embedded.md](../../../docs/development/embedded.md)
    * Rust：[rust.md](../../../docs/development/rust.md)
    * HarmonyOS：[harmonyos.md](../../../docs/development/harmonyos.md)
    * 前后端热加载：[hot-reload.md](../../../docs/development/hot-reload.md)

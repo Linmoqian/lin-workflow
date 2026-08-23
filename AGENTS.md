@@ -153,6 +153,8 @@
 ## 14. 专题规范
 
 * [前端开发](docs/development/frontend.md)
+* [C++ 开发](docs/development/cpp.md)
+* [嵌入式开发](docs/development/embedded.md)
 * [Rust 开发](docs/development/rust.md)
 * [HarmonyOS 开发](docs/development/harmonyos.md)
 * [前后端热加载](docs/development/hot-reload.md)
@@ -170,7 +172,7 @@
 * [项目地图维护](docs/development/project-overview-maintenance.md)
 * [子代理使用](docs/development/subagents.md)
 
-命名优先遵循项目现有规范。JavaScript、TypeScript 使用 `camelCase` 与 `PascalCase`；Python 使用 `snake_case`、`PascalCase` 与 `UPPER_SNAKE_CASE`；C、C++ 无现成约定时，不在单次任务中自行建立新命名体系。
+命名优先遵循项目现有规范。JavaScript、TypeScript 使用 `camelCase` 与 `PascalCase`；Python 使用 `snake_case`、`PascalCase` 与 `UPPER_SNAKE_CASE`；C、C++ 按对应专题规范执行；嵌入式任务同时读取 C++ 与嵌入式规范。
 
 ## 15. 最终汇报
 
