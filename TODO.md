@@ -28,3 +28,4 @@
 - [x] 新增 docs/development/subagents.md 规范
 - [x] 创建项目数字孪生 Overview 示例工程
 - [x] 新增项目地图维护规范文档
+- [x] 补充项目地图及时更新与无截图验证规则
