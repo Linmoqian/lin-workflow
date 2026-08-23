@@ -26,8 +26,8 @@
 
 ## 提交信息
 
-- 遵循 Conventional Commits：`<type>(<scope>): <中文描述>`。
-- 提交信息只使用一行，用一句话高度概括本次提交的唯一目的；描述使用简洁中文，不使用笼统表述。
+- 遵循 Conventional Commits：`<type>(<scope>): <description>`；描述可使用中文或英文。
+- 提交信息只使用一行，用一句话高度概括本次提交的唯一目的；选择项目协作语境中最清晰的语言，不使用笼统表述。
 - 常用类型包括 `feat`、`fix`、`docs`、`refactor`、`test`、`build`、`ci` 和 `chore`。
 - 提交信息不得提及 AI、自动生成或模型身份。
 
@@ -36,6 +36,7 @@
 ```text
 docs(development): 补充 Git 工作流规范
 fix(window): 修复无边框窗口拖拽失效
+docs(i18n): update contribution guidelines
 ```
 
 ## 本地提交与推送边界

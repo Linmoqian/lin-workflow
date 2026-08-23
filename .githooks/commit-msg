@@ -18,12 +18,7 @@ fi
 
 first_line=$(printf '%s\n' "$meaningful_lines" | sed -n '1p')
 if ! printf '%s\n' "$first_line" | grep -Eq '^(feat|fix|docs|refactor|test|build|ci|chore)(\([^)]{1,32}\))?: .+'; then
-  echo "[错误] 提交信息必须符合 Conventional Commits：<type>(<scope>): <一句话中文描述>。" >&2
-  exit 1
-fi
-
-if ! printf '%s\n' "$first_line" | grep -Eq '[一-龥]'; then
-  echo "[错误] 提交描述必须使用中文。" >&2
+  echo "[错误] 提交信息必须符合 Conventional Commits：<type>(<scope>): <一句话描述>。描述可使用中文或英文。" >&2
   exit 1
 fi
 
