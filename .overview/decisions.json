@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "kind": "decisions",
+  "snapshotId": "snap-2026-08-24T10:30:00+08:00-7d2b9c1",
+  "generatedAt": "2026-08-24T10:30:00+08:00",
+  "decisions": [
+    {
+      "id": "ADR-007",
+      "date": "2026-08-24",
+      "title": "Agent Core 与 ROS Bridge 解耦",
+      "status": "accepted",
+      "summary": "通过工具契约隔离 Agent 策略和 ROS 通信，允许两侧独立测试。",
+      "impact": "降低 Agent 变更对设备通信层的直接影响。"
+    },
+    {
+      "id": "ADR-006",
+      "date": "2026-08-19",
+      "title": "急停路径保持设备侧闭环",
+      "status": "accepted",
+      "summary": "急停不依赖 Agent 或网络，保留设备侧硬件与本地控制闭环。",
+      "impact": "现场安全路径不受模型、网络和 ROS 延迟影响。"
+    }
+  ]
+}

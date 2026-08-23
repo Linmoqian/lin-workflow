@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "kind": "risks",
+  "snapshotId": "snap-2026-08-24T10:30:00+08:00-7d2b9c1",
+  "generatedAt": "2026-08-24T10:30:00+08:00",
+  "risks": [
+    {
+      "id": "R-001",
+      "severity": "high",
+      "status": "open",
+      "target": "ROS reconnect",
+      "summary": "过去 14 天修改 17 次，仍存在 FIXME。",
+      "signals": ["17 changes / 14d", "3 failing tests", "FIXME present"],
+      "nextAction": "固定重连状态机并补齐异常 Topic 测试"
+    },
+    {
+      "id": "R-002",
+      "severity": "high",
+      "status": "blocked",
+      "target": "Total station SDK",
+      "summary": "供应商 SDK 没有 Linux 支持，现场集成无法闭环。",
+      "signals": ["platform mismatch", "M4 acceptance blocked"],
+      "nextAction": "完成替代 SDK 与边缘网关方案评估"
+    },
+    {
+      "id": "R-003",
+      "severity": "medium",
+      "status": "open",
+      "target": "Agent executor",
+      "summary": "单文件约 1800 LOC，诊断和恢复逻辑边界不清。",
+      "signals": ["large file", "high coupling", "2 TODO"],
+      "nextAction": "在 Recovery agent 实现前拆分执行器边界"
+    },
+    {
+      "id": "R-004",
+      "severity": "low",
+      "status": "monitoring",
+      "target": "UI Settings",
+      "summary": "设置页面测试覆盖率较低，但当前没有回归失败。",
+      "signals": ["coverage 38%", "no recent failure"],
+      "nextAction": "进入 M5 发布前补测清单"
+    }
+  ]
+}

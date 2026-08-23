@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="description" content="Atlas Field Robotics 项目数字孪生 Overview" />
+    <title>ATLAS / Project Overview</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="brand-lockup">
+          <span class="brand-mark" aria-hidden="true">AT</span>
+          <div>
+            <p class="eyebrow">PROJECT TWIN / FIELD ROBOTICS</p>
+            <h1 id="project-name">Loading project…</h1>
+          </div>
+        </div>
+        <div class="topbar-meta">
+          <span class="status-dot status-dot--active" aria-hidden="true"></span>
+          <span id="project-status">Loading</span>
+          <span class="meta-divider" aria-hidden="true"></span>
+          <span id="last-updated">Awaiting snapshot</span>
+        </div>
+      </header>
+
+      <div id="stale-banner" class="stale-banner is-hidden" role="status"></div>
+      <div id="error-state" class="error-state is-hidden" role="alert"></div>
+
+      <main id="overview" class="overview is-hidden">
+        <section class="hero-grid" aria-labelledby="project-name">
+          <article class="hero-card hero-card--primary">
+            <div class="card-kicker">CURRENT STATE</div>
+            <div class="hero-state-row">
+              <div>
+                <p class="hero-stage" id="project-stage">—</p>
+                <p class="hero-description" id="project-description">—</p>
+              </div>
+              <div class="completion-ring" id="completion-ring" aria-label="实现进度">
+                <span id="completion-progress">—</span>
+                <small>实现</small>
+              </div>
+            </div>
+            <div class="claim-strip">
+              <span class="claim-icon" aria-hidden="true">!</span>
+              <div>
+                <strong id="completion-label">—</strong>
+                <p id="completion-confidence">—</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="hero-card hero-card--goal">
+            <div class="card-kicker">NOW / GOAL</div>
+            <p class="goal-label">当前目标</p>
+            <h2 id="current-goal">—</h2>
+            <div class="goal-commit">
+              <span>last commit</span>
+              <code id="last-commit">—</code>
+            </div>
+          </article>
+        </section>
+
+        <section class="metric-grid" id="metric-grid" aria-label="项目指标"></section>
+
+        <section class="section-block" aria-labelledby="roadmap-title">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">ROADMAP</p>
+              <h2 id="roadmap-title">里程碑树</h2>
+            </div>
+            <p class="section-note">实现进度与验收进度分开计算</p>
+          </div>
+          <div id="roadmap-list" class="roadmap-list"></div>
+        </section>
+
+        <section class="now-grid section-block" aria-labelledby="now-title">
+          <div class="section-heading section-heading--compact">
+            <div>
+              <p class="eyebrow">OPERATING PICTURE</p>
+              <h2 id="now-title">当前作业面</h2>
+            </div>
+          </div>
+          <div id="now-board" class="now-board"></div>
+        </section>
+
+        <section class="split-grid section-block">
+          <article class="panel" aria-labelledby="tasks-title">
+            <div class="panel-heading">
+              <div>
+                <p class="eyebrow">TASK STATE</p>
+                <h2 id="tasks-title">任务与验收</h2>
+              </div>
+              <span id="task-summary" class="panel-caption">—</span>
+            </div>
+            <div id="task-list" class="task-list"></div>
+          </article>
+
+          <article class="panel" aria-labelledby="risk-title">
+            <div class="panel-heading">
+              <div>
+                <p class="eyebrow">RISK RADAR</p>
+                <h2 id="risk-title">风险雷达</h2>
+              </div>
+              <span id="risk-summary" class="panel-caption">—</span>
+            </div>
+            <div id="risk-list" class="risk-list"></div>
+          </article>
+        </section>
+
+        <section class="section-block" aria-labelledby="modules-title">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">MODULE HEALTH</p>
+              <h2 id="modules-title">模块健康度</h2>
+            </div>
+            <p class="section-note">状态由测试、变更、耦合和风险信号推导</p>
+          </div>
+          <div id="module-table" class="module-table" role="table" aria-label="模块健康度"></div>
+        </section>
+
+        <section class="split-grid section-block">
+          <article class="panel" aria-labelledby="changelog-title">
+            <div class="panel-heading">
+              <div>
+                <p class="eyebrow">PROJECT NEWS</p>
+                <h2 id="changelog-title">过去 7 天发生了什么</h2>
+              </div>
+              <span id="changelog-period" class="panel-caption">—</span>
+            </div>
+            <div id="changelog-list" class="changelog-list"></div>
+          </article>
+
+          <article class="panel" aria-labelledby="architecture-title">
+            <div class="panel-heading">
+              <div>
+                <p class="eyebrow">ARCHITECTURE</p>
+                <h2 id="architecture-title">系统边界</h2>
+              </div>
+              <span class="panel-caption">derived map</span>
+            </div>
+            <div id="architecture-map" class="architecture-map"></div>
+            <div id="decision-list" class="decision-list"></div>
+          </article>
+        </section>
+
+        <footer class="footer-note">
+          <span>MAP SNAPSHOT</span>
+          <span id="snapshot-detail">—</span>
+          <span>·</span>
+          <span>所有结论都应能追溯到证据</span>
+        </footer>
+      </main>
+    </div>
+    <script src="./app.js" defer></script>
+  </body>
+</html>

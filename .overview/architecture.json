@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "kind": "architecture",
+  "snapshotId": "snap-2026-08-24T10:30:00+08:00-7d2b9c1",
+  "generatedAt": "2026-08-24T10:30:00+08:00",
+  "layers": [
+    { "id": "presentation", "label": "Presentation", "description": "面向操作员的 APP 与地图交互" },
+    { "id": "agent", "label": "Agent Core", "description": "工具调用、诊断和恢复策略" },
+    { "id": "bridge", "label": "ROS Bridge", "description": "ROS Topic、服务和设备通信边界" },
+    { "id": "device", "label": "Device Layer", "description": "机器人、喷墨机和全站仪" }
+  ],
+  "relations": [
+    { "from": "presentation", "to": "agent", "label": "commands / status" },
+    { "from": "agent", "to": "bridge", "label": "tools / diagnostics" },
+    { "from": "bridge", "to": "device", "label": "ROS topics / SDK" },
+    { "from": "device", "to": "bridge", "label": "telemetry" }
+  ],
+  "boundaries": [
+    { "name": "Agent Core ↔ ROS Bridge", "status": "decoupled", "note": "通过工具契约通信，允许独立测试" },
+    { "name": "ROS Bridge ↔ Total Station SDK", "status": "risk", "note": "Linux 支持缺失" }
+  ]
+}

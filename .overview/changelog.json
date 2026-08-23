@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "kind": "changelog",
+  "snapshotId": "snap-2026-08-24T10:30:00+08:00-7d2b9c1",
+  "generatedAt": "2026-08-24T10:30:00+08:00",
+  "period": {
+    "from": "2026-08-17",
+    "to": "2026-08-24"
+  },
+  "entries": [
+    {
+      "scope": "Agent",
+      "title": "Tool Registry 完成重构",
+      "bullets": ["新增 tool timeout", "删除 legacy executor", "诊断工具进入统一注册表"],
+      "commits": ["7d2b9c1", "1e4b8a0"]
+    },
+    {
+      "scope": "ROS",
+      "title": "开始补齐断线重连",
+      "bullets": ["增加 reconnect 状态机", "修改 Topic discovery", "保留 3 个待修复测试"],
+      "commits": ["5ac301e", "c8f9912"]
+    },
+    {
+      "scope": "UI",
+      "title": "新增设备状态页面",
+      "bullets": ["展示连接状态", "加入急停状态提示", "地图交互接入设备选择"],
+      "commits": ["9f0a11d"]
+    },
+    {
+      "scope": "Architecture",
+      "title": "Agent Core 与 ROS Bridge 正式解耦",
+      "bullets": ["工具契约成为边界", "增加独立诊断入口", "同步 ADR-007"],
+      "commits": ["7d2b9c1"]
+    }
+  ]
+}

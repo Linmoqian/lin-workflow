@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "kind": "modules",
+  "snapshotId": "snap-2026-08-24T10:30:00+08:00-7d2b9c1",
+  "generatedAt": "2026-08-24T10:30:00+08:00",
+  "modules": [
+    {
+      "id": "ui",
+      "name": "UI",
+      "status": "stable",
+      "lastModified": "2026-08-22T16:10:00+08:00",
+      "tests": { "coverage": 82, "status": "passing" },
+      "risk": "low",
+      "summary": "地图交互与设备状态页面稳定。",
+      "evidence": ["128 个测试中 41 个覆盖 UI", "最近 7 天无失败回归"]
+    },
+    {
+      "id": "agent",
+      "name": "Agent",
+      "status": "active",
+      "lastModified": "2026-08-24T09:48:00+08:00",
+      "tests": { "coverage": 67, "status": "partial" },
+      "risk": "medium",
+      "summary": "Tool Registry 已重构，Diagnostics 正在接入。",
+      "evidence": ["过去 7 天 9 次变更", "Recovery agent 尚未实现"]
+    },
+    {
+      "id": "ros",
+      "name": "ROS Bridge",
+      "status": "risk",
+      "lastModified": "2026-08-24T08:22:00+08:00",
+      "tests": { "coverage": 31, "status": "failing" },
+      "risk": "high",
+      "summary": "断线重连逻辑频繁变动，测试仍有失败。",
+      "evidence": ["过去 14 天 17 次变更", "3 个重连测试失败", "存在 FIXME"]
+    },
+    {
+      "id": "vision",
+      "name": "Vision",
+      "status": "experimental",
+      "lastModified": "2026-08-15T11:05:00+08:00",
+      "tests": { "coverage": 55, "status": "passing" },
+      "risk": "medium",
+      "summary": "现场目标识别仍处于实验阶段。",
+      "evidence": ["算法接口未冻结", "缺少现场数据集回放测试"]
+    },
+    {
+      "id": "device-io",
+      "name": "Device IO",
+      "status": "stable",
+      "lastModified": "2026-08-20T14:40:00+08:00",
+      "tests": { "coverage": 76, "status": "passing" },
+      "risk": "low",
+      "summary": "机器人运动与喷墨机基础控制已验收。",
+      "evidence": ["M2 验收通过", "急停路径有硬件回归记录"]
+    },
+    {
+      "id": "mapping",
+      "name": "Mapping",
+      "status": "active",
+      "lastModified": "2026-08-23T18:30:00+08:00",
+      "tests": { "coverage": 48, "status": "partial" },
+      "risk": "medium",
+      "summary": "APP 地图交互已接通，自动寻路尚未实现。",
+      "evidence": ["交互流程可演示", "缺少真实设备路径回放"]
+    },
+    {
+      "id": "telemetry",
+      "name": "Telemetry",
+      "status": "dormant",
+      "lastModified": "2026-08-08T10:15:00+08:00",
+      "tests": { "coverage": 0, "status": "not_started" },
+      "risk": "low",
+      "summary": "等待现场数据样本，当前没有继续推进。",
+      "evidence": ["任务已暂停", "尚无稳定事件协议"]
+    }
+  ]
+}

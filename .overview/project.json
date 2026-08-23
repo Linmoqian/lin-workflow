@@ -1,0 +1,140 @@
+{
+  "schemaVersion": 1,
+  "kind": "project",
+  "snapshotId": "snap-2026-08-24T10:30:00+08:00-7d2b9c1",
+  "generatedAt": "2026-08-24T10:30:00+08:00",
+  "project": {
+    "name": "Atlas Field Robotics",
+    "codename": "ATLAS",
+    "description": "面向现场作业的机器人控制与 Agent 协同系统。",
+    "version": "v0.4.0-rc",
+    "status": "in_progress",
+    "stage": "M3 Agent Integration",
+    "lastUpdated": "2026-08-24T10:30:00+08:00",
+    "lastCommit": {
+      "short": "7d2b9c1",
+      "message": "refactor(agent): 解耦 Agent Core 与 ROS Bridge",
+      "at": "2026-08-24T09:48:00+08:00"
+    }
+  },
+  "metrics": {
+    "loc": 18420,
+    "files": 126,
+    "moduleCount": 7,
+    "technicalDebtCount": 14,
+    "riskCount": 4,
+    "tests": {
+      "status": "partial",
+      "coverage": 72,
+      "passed": 128,
+      "failed": 3,
+      "pending": 6
+    },
+    "build": {
+      "status": "passed",
+      "lastRunAt": "2026-08-24T10:12:00+08:00"
+    }
+  },
+  "completion": {
+    "result": "unsupported",
+    "ruleVersion": 1,
+    "observedCommit": "7d2b9c1",
+    "claim": "cannot_claim_complete",
+    "label": "不能声明完成",
+    "confidence": "medium",
+    "reasons": [
+      "Diagnostics 仍处于实现完成、验证未完成状态",
+      "Recovery agent 尚未实现",
+      "现场坐标变换测试缺少可追溯证据",
+      "当前工作区存在尚未重新测绘的改动"
+    ],
+    "progress": {
+      "implementation": 78,
+      "verification": 55,
+      "acceptance": 34
+    }
+  },
+  "now": {
+    "goal": "完成机器人 v0.4 的现场测试",
+    "doing": [
+      "ROS reconnect",
+      "喷墨机控制",
+      "APP 地图交互"
+    ],
+    "next": [
+      "自动寻路",
+      "Agent diagnostics"
+    ],
+    "blocked": [
+      "全站仪 SDK 暂不支持 Linux"
+    ],
+    "paused": [
+      "Telemetry 事件协议等待现场数据样本"
+    ]
+  },
+  "roadmap": [
+    {
+      "id": "M1",
+      "title": "Foundation",
+      "status": "accepted",
+      "implementationProgress": 100,
+      "acceptanceProgress": 100,
+      "deliverables": [
+        { "state": "accepted", "title": "Project structure" },
+        { "state": "accepted", "title": "APP shell" },
+        { "state": "accepted", "title": "ROS connection" }
+      ]
+    },
+    {
+      "id": "M2",
+      "title": "Device Control",
+      "status": "accepted",
+      "implementationProgress": 100,
+      "acceptanceProgress": 100,
+      "deliverables": [
+        { "state": "accepted", "title": "Robot movement" },
+        { "state": "accepted", "title": "Emergency stop" },
+        { "state": "accepted", "title": "Inkjet basic control" }
+      ]
+    },
+    {
+      "id": "M3",
+      "title": "Agent Integration",
+      "status": "active",
+      "implementationProgress": 78,
+      "acceptanceProgress": 55,
+      "deliverables": [
+        { "state": "accepted", "title": "Tool calling" },
+        { "state": "accepted", "title": "ROS tools" },
+        { "state": "implemented", "title": "Diagnostics" },
+        { "state": "planned", "title": "Recovery agent" }
+      ]
+    },
+    {
+      "id": "M4",
+      "title": "Field Integration",
+      "status": "active",
+      "implementationProgress": 46,
+      "acceptanceProgress": 20,
+      "deliverables": [
+        { "state": "accepted", "title": "Device communication" },
+        { "state": "doing", "title": "Total station" },
+        { "state": "doing", "title": "Coordinate transform" },
+        { "state": "blocked", "title": "Site test" }
+      ]
+    },
+    {
+      "id": "M5",
+      "title": "Release",
+      "status": "planned",
+      "implementationProgress": 10,
+      "acceptanceProgress": 0,
+      "deliverables": [
+        { "state": "planned", "title": "Installer" },
+        { "state": "planned", "title": "Telemetry" },
+        { "state": "planned", "title": "Logging" },
+        { "state": "planned", "title": "Acceptance" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "kind": "snapshot",
+  "snapshotId": "snap-2026-08-24T10:30:00+08:00-7d2b9c1",
+  "generatedAt": "2026-08-24T10:30:00+08:00",
+  "observedCommit": "7d2b9c1",
+  "branch": "main",
+  "workingTree": "dirty",
+  "freshness": {
+    "status": "partial",
+    "maxAgeSeconds": 86400,
+    "reason": "现场验收数据未被当前观测覆盖"
+  },
+  "coverage": {
+    "git": "complete",
+    "tests": "partial",
+    "build": "complete",
+    "architecture": "complete",
+    "fieldAcceptance": "missing"
+  },
+  "sourceCoverage": {
+    "git": true,
+    "tests": true,
+    "build": true,
+    "architecture": true,
+    "fieldAcceptance": false
+  },
+  "unknowns": [
+    "现场坐标变换测试结果尚未归档",
+    "Recovery agent 还没有可观测实现"
+  ]
+}

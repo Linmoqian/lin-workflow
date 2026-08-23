@@ -26,3 +26,4 @@
 - [x] 迁移 skills 为 pi-subagents 可加载的 .pi/skills 格式
 - [x] 定制项目级子代理（.pi/agents）
 - [x] 新增 docs/development/subagents.md 规范
+- [x] 创建项目数字孪生 Overview 示例工程

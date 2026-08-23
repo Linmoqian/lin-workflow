@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "kind": "tasks",
+  "snapshotId": "snap-2026-08-24T10:30:00+08:00-7d2b9c1",
+  "generatedAt": "2026-08-24T10:30:00+08:00",
+  "tasks": [
+    {
+      "id": "T-031",
+      "title": "ROS reconnect",
+      "status": "doing",
+      "bucket": "doing",
+      "milestone": "M4",
+      "priority": "high",
+      "owner": "ROS",
+      "acceptance": { "required": 4, "passed": 2, "pending": 2 },
+      "evidence": ["重连流程已接入", "异常 Topic 测试仍失败"]
+    },
+    {
+      "id": "T-032",
+      "title": "喷墨机控制",
+      "status": "accepted",
+      "bucket": "accepted",
+      "milestone": "M2",
+      "priority": "high",
+      "owner": "Device IO",
+      "acceptance": { "required": 3, "passed": 3, "pending": 0 },
+      "evidence": ["硬件回归记录 #HW-18", "急停路径通过"]
+    },
+    {
+      "id": "T-033",
+      "title": "APP 地图交互",
+      "status": "doing",
+      "bucket": "doing",
+      "milestone": "M4",
+      "priority": "medium",
+      "owner": "UI",
+      "acceptance": { "required": 4, "passed": 3, "pending": 1 },
+      "evidence": ["交互流程可演示", "真实路径回放待补"]
+    },
+    {
+      "id": "T-034",
+      "title": "Agent diagnostics",
+      "status": "implemented",
+      "bucket": "implemented",
+      "milestone": "M3",
+      "priority": "high",
+      "owner": "Agent",
+      "acceptance": { "required": 5, "passed": 3, "pending": 2 },
+      "evidence": ["诊断工具已注册", "现场故障样本覆盖不足"]
+    },
+    {
+      "id": "T-035",
+      "title": "自动寻路",
+      "status": "planned",
+      "bucket": "next",
+      "milestone": "M4",
+      "priority": "medium",
+      "owner": "Mapping",
+      "acceptance": { "required": 3, "passed": 0, "pending": 3 },
+      "evidence": ["依赖坐标变换稳定"]
+    },
+    {
+      "id": "T-036",
+      "title": "全站仪 Linux SDK 适配",
+      "status": "blocked",
+      "bucket": "blocked",
+      "milestone": "M4",
+      "priority": "critical",
+      "owner": "Device IO",
+      "acceptance": { "required": 2, "passed": 0, "pending": 2 },
+      "evidence": ["供应商 SDK 仅提供 Windows 二进制", "替代方案评估中"]
+    },
+    {
+      "id": "T-037",
+      "title": "Telemetry 事件协议",
+      "status": "paused",
+      "bucket": "paused",
+      "milestone": "M5",
+      "priority": "low",
+      "owner": "Telemetry",
+      "acceptance": { "required": 3, "passed": 0, "pending": 3 },
+      "evidence": ["等待现场数据样本"]
+    }
+  ]
+}
