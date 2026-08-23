@@ -31,6 +31,7 @@
 * 默认使用单线程；仅按实际需求或测量结果引入有界并发，异步不等同于多线程。
 * 发现无关问题时可以汇报，但不得擅自修改。
 * 专题规范前置读取：当任务涉及某项技术、工具、文件格式、目录、流程或外部系统时，若对应专题规范尚未读取，必须先读取该规范，确认约束、验证方式和边界后再执行下一步；不得仅凭记忆或通用经验行动。
+* 涉及 GitHub Wiki 的创建、编辑、同步、发布、归档或删除时，必须先读取 [GitHub Wiki 规范](docs/development/github-wiki.md) 和 [写作规范](docs/development/writing.md)。
 
 ### 根目录结构
 
@@ -176,6 +177,7 @@
 * [CMake](docs/development/cmake.md)
 * [Git 工作流](docs/development/git-workflow.md)
 * [GitHub 规范](docs/development/github.md)
+* [GitHub Wiki](docs/development/github-wiki.md)
 * [验证](docs/development/verification.md)
 * [代码 Review](docs/development/code-review.md)
 * [日志与终端输出](docs/development/logging.md)
