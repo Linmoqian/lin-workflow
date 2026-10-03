@@ -1,6 +1,7 @@
 ---
 name: writing-standard
-description: 按本项目通用写作规范创建、改写、审校技术文档、开发文档、报告、Markdown 或需要导出 PDF 的 LaTeX 文档。适用于需要明确读者、结构、事实依据、图表代码表达、引用与交付核验的写作任务。
+description: >-
+  写作交付工作流：目录与素材管理、文档工作流程、LaTeX 与 PDF 交付核验。创建、改写或审校技术文档、报告，或需要导出 PDF 的 LaTeX 文档时加载；通用表达与禁令细则见 writing。
 ---
 
 # 通用写作规范

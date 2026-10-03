@@ -22,7 +22,7 @@
     {
       "name": "code-comments",
       "category": "质量与协作",
-      "description": "代码注释规范：注释解释原因约束风险而非翻译实现、必须说明的内容、禁止事项、TODO 与 FIXME 约定、语言约定与评审要求。为代码编写注释或审查注释质量时加载。"
+      "description": "代码注释规范：注释解释原因、约束与风险，不翻译实现；必须说明的内容、禁止事项、TODO 与 FIXME 约定、语言约定与评审要求。为代码编写注释或审查注释质量时加载。"
     },
     {
       "name": "code-review",
@@ -112,7 +112,7 @@
     {
       "name": "project-engineering",
       "category": "工程流程",
-      "description": ""
+      "description": "项目工程流程：规范读取路径、根目录布局、实施步骤、项目记录、决策边界、验证选择、工具兼容与提交汇报。在仓库内实施代码、配置、文档、依赖或构建改动，或需要遵循项目约束、保护工作区、维护 TODO.md、创建本地提交时加载。"
     },
     {
       "name": "python-dev",
@@ -177,7 +177,7 @@
     {
       "name": "writing-standard",
       "category": "写作与工具",
-      "description": ""
+      "description": "写作交付工作流：目录与素材管理、文档工作流程、LaTeX 与 PDF 交付核验。创建、改写或审校技术文档、报告，或需要导出 PDF 的 LaTeX 文档时加载；通用表达与禁令细则见 writing。"
     }
   ]
 }
