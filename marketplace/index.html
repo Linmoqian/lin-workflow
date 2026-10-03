@@ -61,8 +61,13 @@
   </header>
 
   <div class="install">
-    <span>整包安装：</span><code id="installCmd">pi install git:github.com/Linmoqian/lin-workflow</code>
-    <button onclick="copyText('installCmd', this)">复制</button>
+    <span style="width:100%;font-weight:600">安装（Windows 用 pwsh，Linux/macOS 用 bash，参数同构）</span>
+    <span>pi：</span><code id="cmd-pi">pi install git:github.com/Linmoqian/lin-workflow</code><button onclick="copyText('cmd-pi', this)">复制</button><br>
+    <span>pi+Codex 共享：</span><code id="cmd-agents">pwsh marketplace/install.ps1</code><button onclick="copyText('cmd-agents', this)">复制</button><br>
+    <span>Claude Code：</span><code id="cmd-claude">pwsh marketplace/install.ps1 -Target claude -Agents</code><button onclick="copyText('cmd-claude', this)">复制</button><br>
+    <span>仅 Codex：</span><code id="cmd-codex">pwsh marketplace/install.ps1 -Target codex -Agents</code><button onclick="copyText('cmd-codex', this)">复制</button><br>
+    <span>dsh：</span><code id="cmd-dsh">pwsh marketplace/install.ps1 -Target dsh</code><button onclick="copyText('cmd-dsh', this)">复制</button><br>
+    <span>当前项目全平台：</span><code id="cmd-project">pwsh marketplace/install.ps1 -Target project -Agents</code><button onclick="copyText('cmd-project', this)">复制</button>
     <span class="count" id="count"></span>
   </div>
 
@@ -135,7 +140,6 @@
       .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
       .then(data => {
         allSkills = data.skills;
-        document.getElementById("installCmd").textContent = data.install;
         document.getElementById("count").textContent = data.count + " 个 Skill · 索引生成于 " + data.generatedAt;
         render("");
       })

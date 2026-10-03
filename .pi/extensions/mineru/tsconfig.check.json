@@ -1,0 +1,29 @@
+// mineru 扩展 —— 类型检查专用配置（不是构建配置，扩展由 pi 的 jiti 直接运行）
+//
+// 用法：npx --yes --package typescript@5.9 -- tsc -p tsconfig.check.json
+//
+// 说明：扩展目录本身没有 node_modules，运行期由 pi 的 jiti alias 提供
+// @earendil-works/* 与 typebox；这里用 paths 把它们指向本机的 pi 安装位置，
+// 只为了让 tsc 能拿到同一份 .d.ts 做校验。pi 装在别处时改下面的路径即可。
+{
+  "compilerOptions": {
+    "target": "ES2023",
+    "lib": ["ES2023"],
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "noEmit": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "baseUrl": ".",
+    "typeRoots": ["C:/Users/30470/miniforge3/node_modules/@earendil-works/pi-coding-agent/node_modules/@types"],
+    "types": ["node"],
+    "paths": {
+      "@earendil-works/pi-coding-agent": ["C:/Users/30470/miniforge3/node_modules/@earendil-works/pi-coding-agent/dist/index.d.ts"],
+      "@earendil-works/pi-ai": ["C:/Users/30470/miniforge3/node_modules/@earendil-works/pi-coding-agent/node_modules/@earendil-works/pi-ai/dist/index.d.ts"],
+      "@earendil-works/pi-tui": ["C:/Users/30470/miniforge3/node_modules/@earendil-works/pi-coding-agent/node_modules/@earendil-works/pi-tui/dist/index.d.ts"],
+      "typebox": ["C:/Users/30470/miniforge3/node_modules/@earendil-works/pi-coding-agent/node_modules/typebox/build/index.d.mts"]
+    }
+  },
+  "include": ["*.ts"]
+}

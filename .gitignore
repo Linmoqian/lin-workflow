@@ -1,3 +1,6 @@
-# 项目级 Pi 运行时产物（tasks 会话任务、extensions 含 .env 密钥）
+# 项目级 Pi 运行时产物（会话任务）
 .pi/tasks/
-.pi/extensions/
+
+# Pi 扩展内的密钥文件（扩展源码本身入库，各扩展自带 .env.example）
+.pi/extensions/**/.env
+.env

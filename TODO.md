@@ -60,3 +60,4 @@
 - [x] 新增多平台安装器 install.ps1 支持 Codex 与 pi 共享 skill
 - [x] install.ps1 支持 -Agents 子代理多平台安装（pi 原生复制与 Codex role TOML 转换）
 - [x] 完善子代理：AGENTS.md 主引用、skill 按需加载指引、补 test_pilot 与 pwsh_exec 工具
+- [x] 安装器全平台化：pi/Codex/Claude Code/dsh/project 多目标与 bash 跨平台版；extensions 入库并隔离 .env
