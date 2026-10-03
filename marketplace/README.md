@@ -14,7 +14,17 @@ lin-workflow 的 pi Skill 浏览与安装入口。本目录是零依赖静态交
 
 1. Skill 增删或描述变更后重新生成索引：`pwsh marketplace/generate.ps1`，随改动一并提交 `skills.json`。
 2. 本地预览：`python -m http.server` 后访问 `http://localhost:8000/marketplace/`（`file://` 协议无法 fetch 索引）。
-3. 安装（用户侧）：`pi install git:github.com/Linmoqian/lin-workflow`；单 Skill 启用配置见页面卡片按钮。
+
+## 安装（按平台）
+
+| 平台 | 命令 | 安装位置 |
+| --- | --- | --- |
+| pi | `pi install git:github.com/Linmoqian/lin-workflow` | 由 pi 管理 |
+| Codex / pi 共享 | `git clone` 后 `pwsh marketplace/install.ps1` | `~/.agents/skills/`（两平台均读取） |
+| 仅 Codex | `pwsh marketplace/install.ps1 -Target codex` | `~/.codex/skills/` |
+| 当前项目 | `pwsh marketplace/install.ps1 -Target project` | `./.agents/skills/`（随项目走） |
+
+按名单安装：加 `-Skills python-dev,tauri`；查看可用清单：`-List`。Codex 按 Agent Skills 规范发现 SKILL.md，与本仓库格式直接兼容。
 
 ## 分类映射
 

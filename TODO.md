@@ -57,3 +57,4 @@
 - [x] 移除 overview 目录与 overview-maintenance Skill
 - [x] 新增文件层级组织 Skill
 - [x] 构建 pi 插件市场：package.json 包化与 marketplace 静态页
+- [x] 新增多平台安装器 install.ps1 支持 Codex 与 pi 共享 skill
