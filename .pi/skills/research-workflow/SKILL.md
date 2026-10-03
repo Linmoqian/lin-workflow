@@ -13,14 +13,14 @@ description: >-
 
 先读取根目录 `AGENTS.md`、`CLAUDE.md` 和 `TODO.md`。根据任务实际范围读取专题规范，不得凭记忆替代规范：
 
-- 写作或论文交付：[写作规范](../../../docs/development/writing.md)和项目 `writing-standard` Skill。
-- 数据、实验或生物样本：[数据与实验规范](../../../docs/development/data-experiment.md)。
-- 训练、评测或推理：[机器学习规范](../../../docs/development/ml.md)。
-- 机器人、控制、传感器或执行器：[具身智能与机器人规范](../../../docs/development/robotics.md)。
-- 仿真、回放或 HIL：[仿真与硬件在环规范](../../../docs/development/simulation.md)。
-- 数值、坐标、姿态或时间戳：[单位、坐标与时间规范](../../../docs/development/units-coordinate-time.md)。
-- 高风险设备、人体或现场运行：[系统安全规范](../../../docs/development/safety.md)。
-- 需要审查或验收：[代码 Review 规范](../../../docs/development/code-review.md)和[验证规范](../../../docs/development/verification.md)。
+- 写作或论文交付：[写作规范](../writing/SKILL.md)和项目 `writing-standard` Skill。
+- 数据、实验或生物样本：[数据与实验规范](../data-experiment/SKILL.md)。
+- 训练、评测或推理：[机器学习规范](../ml-dev/SKILL.md)。
+- 机器人、控制、传感器或执行器：[具身智能与机器人规范](../robotics/SKILL.md)。
+- 仿真、回放或 HIL：[仿真与硬件在环规范](../simulation-hil/SKILL.md)。
+- 数值、坐标、姿态或时间戳：[单位、坐标与时间规范](../units-coordinate-time/SKILL.md)。
+- 高风险设备、人体或现场运行：[系统安全规范](../system-safety/SKILL.md)。
+- 需要审查或验收：[代码 Review 规范](../code-review/SKILL.md)和[验证规范](../verification/SKILL.md)。
 
 如果任务同时涉及代码、接口、日志、并发、C++、嵌入式、Python、Rust、CMake 或 HarmonyOS，再读取对应专题规范。发现当前目录有更具体的规则时，先读取并遵守它。
 
@@ -116,7 +116,7 @@ description: >-
 
 ### 4.6 写作与交付
 
-根据读者选择 Markdown、LaTeX 或 PDF；遵循[写作规范](../../../docs/development/writing.md)和 `writing-standard` Skill。正式文稿至少包含：研究问题与范围、方法和数据、结果、限制、复现入口、伦理/安全说明（适用时）和参考文献。
+根据读者选择 Markdown、LaTeX 或 PDF；遵循[写作规范](../writing/SKILL.md)和 `writing-standard` Skill。正式文稿至少包含：研究问题与范围、方法和数据、结果、限制、复现入口、伦理/安全说明（适用时）和参考文献。
 
 写作时建立主张—证据矩阵：
 
@@ -135,7 +135,7 @@ description: >-
 1. **证据审查：** 研究问题是否得到回答，主张是否有来源，引用是否真实，结果是否与实验记录一致，失败与限制是否披露。
 2. **工程审查：** 数据血缘、版本绑定、划分泄漏、单位/坐标/时间、日志、权限、资源、并发、测试、安全状态和回滚是否满足专题规范。
 
-按 [代码 Review 规范](../../../docs/development/code-review.md) 在 `docs/review/YYYY-MM-DD-code-review-主题名.md` 记录仓库问题、潜在风险、证据、未覆盖范围和修复优先级。研究交付物归档时保留研究简报、协议、运行清单、数据/模型清单、结果、报告和验证记录；不提交受限原始数据或凭证。
+按 [代码 Review 规范](../code-review/SKILL.md) 在 `docs/review/YYYY-MM-DD-code-review-主题名.md` 记录仓库问题、潜在风险、证据、未覆盖范围和修复优先级。研究交付物归档时保留研究简报、协议、运行清单、数据/模型清单、结果、报告和验证记录；不提交受限原始数据或凭证。
 
 ## 5. AI 使用边界
 

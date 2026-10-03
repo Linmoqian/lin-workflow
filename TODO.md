@@ -52,3 +52,4 @@
 - [x] 允许英文提交信息并移除钩子的中文限制
 - [x] 补充 GitHub Wiki 创建、维护与发布规范
 - [x] 将 GitHub Wiki 子模块挂载与同步流程纳入规范
+- [x] 将 AGENTS 与 docs 全部规范沉淀为 .pi/skills Skill 并瘦身入口文档

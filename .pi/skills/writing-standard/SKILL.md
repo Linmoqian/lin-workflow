@@ -9,7 +9,7 @@ description: 按本项目通用写作规范创建、改写、审校技术文档�
 
 ## 读取规范
 
-1. 先阅读 [写作规范](../../../docs/development/writing.md)。
+1. 先阅读 [通用写作规范](../writing/SKILL.md)。
 2. 涉及代码、接口或测试文档时，再读取对应专题规范。
 3. 仅在需要交付 LaTeX 或 PDF 时，阅读 [LaTeX 专项参考](references/latex.md)。
 
