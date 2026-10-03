@@ -26,6 +26,18 @@ lin-workflow 的 pi Skill 浏览与安装入口。本目录是零依赖静态交
 
 按名单安装：加 `-Skills python-dev,tauri`；查看可用清单：`-List`。Codex 按 Agent Skills 规范发现 SKILL.md，与本仓库格式直接兼容。
 
+## 子代理安装
+
+加 `-Agents` 开关同时安装 `.pi/agents/` 下的 6 个子代理：
+
+| 目标 | 安装位置 | 形式 |
+| --- | --- | --- |
+| `-Target agents`（默认） | `~/.pi/agent/agents/` | 原样复制（pi-subagents 原生格式） |
+| `-Target codex` | `~/.codex/agents/` | 转换为 Codex role TOML |
+| `-Target project` | `./.codex/agents/` | 转换为 Codex role TOML |
+
+转换映射（依据 openai/codex agent-roles 源码）：`name`/`description`/`aliases`→`nickname_candidates`/`thinking`→`model_reasoning_effort`（max→xhigh）/正文→`developer_instructions`（CLAUDE.md 表述改 AGENTS.md、`contact_supervisor` 改 `send_message`、`output` 附加产出文件说明）。`tools`、`systemPromptMode`、`inheritProjectContext`、`inheritSkills` 无文件级对应，不迁移；Codex 侧 spawn 时通过 `agent_type=<name>` 引用。
+
 ## 分类映射
 
 `generate.ps1` 内的 `$categoryMap` 手工维护 skill 到分类的归属；新增 skill 未列入映射时归入「其他」。
