@@ -41,8 +41,8 @@ description: >-
 
 ## 4. 自动化验证命令
 
-- 开发时使用 `npm run test` 进入监听模式。
-- CI 使用 `npm run test:run` 单次执行测试。
+- 开发时使用 `pnpm test` 进入监听模式。
+- CI 使用 `pnpm test:run` 单次执行测试。
 - 类型检查、ESLint、构建与测试分别执行，具体命令以项目 `package.json` 中已有脚本为准。
 - 覆盖率阈值暂不设定，待项目形成稳定测试基线后确认。
 

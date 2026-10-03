@@ -11,7 +11,7 @@ description: >-
 - 本规范适用于 HarmonyOS 应用的 ArkTS/ETS、ArkUI、资源、权限和依赖改动。
 - 使用 `devecocli help` 查询实际可用命令和参数；不凭记忆拼接命令或假定工具版本。
 - 新工程的最短验证流程如下；仅在工程师明确要求创建工程时执行。
--  npm install -g @deveco/deveco-cli@stable 为安装方式
+-  `pnpm add -g @deveco/deveco-cli@stable` 为安装方式；pnpm 全局安装异常时按官方文档使用 `npm install -g @deveco/deveco-cli@stable`
 
 ```powershell
 devecocli create --app-name MyApp

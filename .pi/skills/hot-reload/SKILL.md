@@ -1,14 +1,14 @@
 ---
 name: hot-reload
 description: >-
-  前后端热加载规范：统一使用 npm run tauri dev 入口、Vite HMR、Rust 自动重建与重启、devUrl 与端口一致性、验证方式与官方依据。调试前后端联调、热更新失效或开发服务器配置时加载。
+  前后端热加载规范：统一使用 pnpm tauri dev 入口、Vite HMR、Rust 自动重建与重启、devUrl 与端口一致性、验证方式与官方依据。调试前后端联调、热更新失效或开发服务器配置时加载。
 ---
 
 # 前后端热加载规范
 
 ## 统一开发入口
 
-- 桌面开发统一使用项目定义的 `npm run tauri dev`，由 Tauri CLI 同时管理前端开发服务器和 Rust 应用进程。
+- 桌面开发统一使用项目定义的 `pnpm tauri dev`，由 Tauri CLI 同时管理前端开发服务器和 Rust 应用进程。
 - `tauri.conf.json` 的 `build.beforeDevCommand` 启动 Vite，`build.devUrl` 必须与 Vite 的开发地址和端口一致。
 - 不额外编写重复的文件监听或进程守护脚本；确有性能问题时，优先使用 `.taurignore` 排除生成文件、构建产物等无关路径。
 - Vite 设置 `clearScreen: false`，避免前端刷新覆盖 Rust 编译错误。

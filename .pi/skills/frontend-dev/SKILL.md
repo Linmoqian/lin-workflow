@@ -100,7 +100,7 @@ app/src/
 - 组件测试覆盖渲染、用户交互和可见状态变化；Hooks、工具函数和状态逻辑按公开行为进行单元测试。
 - Tauri IPC 使用 `vi.mock` 隔离；真实前后端联调不属于前端单元测试范围。
 - 不测试组件内部实现细节，不滥用快照；仅在稳定且审查价值明确时使用快照。
-- 本地开发使用 `npm run test` 进入监听模式，CI 使用 `npm run test:run` 单次执行；对应脚本分别约定为 `vitest` 和 `vitest run`。
+- 本地开发使用 `pnpm test` 进入监听模式，CI 使用 `pnpm test:run` 单次执行；对应脚本分别约定为 `vitest` 和 `vitest run`。
 
 ## 桌面窗口与交互
 
