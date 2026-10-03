@@ -2,7 +2,7 @@
   "generatedAt": "2026-10-03",
   "source": "https://github.com/Linmoqian/lin-workflow",
   "install": "pi install git:github.com/Linmoqian/lin-workflow",
-  "count": 33,
+  "count": 34,
   "skills": [
     {
       "name": "api-documentation",
@@ -43,6 +43,11 @@
       "name": "dependency-management",
       "category": "工程流程",
       "description": "依赖管理规范：包管理器统一使用 pnpm（JavaScript/TypeScript）与 uv（Python）、不混用 npm/yarn、不顺便升级或重写锁文件、pnpm dlx 临时执行、新增依赖前评估体积维护许可证安全与兼容性。新增、升级或移除项目依赖前加载。"
+    },
+    {
+      "name": "dev-log",
+      "category": "工程流程",
+      "description": "开发日志习惯规范：何时记录（完成任务、做出决策、遇到问题与风险）、log 文件与 CSV 两种载体格式与选择规则（docs/logs/ 下按日 .log 或按月 .csv）、字段与类型枚举、追加写入约定、与 TODO.md 和提交信息的边界。完成阶段性工作、做出重要决策、排查问题、记录风险，或需要回顾开发过程与统计时加载。"
     },
     {
       "name": "embedded-dev",
