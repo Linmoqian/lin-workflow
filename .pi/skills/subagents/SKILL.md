@@ -10,7 +10,7 @@ description: >-
 
 ## 一、可用子代理
 
-项目在 `.pi/agents/` 提供 6 个定制子代理，均遵循本仓库工程规范，并继承 `CLAUDE.md`（AGENTS.md 同源）项目上下文。
+项目在 `.pi/agents/` 提供 6 个定制子代理，均遵循本仓库工程规范，并继承 `AGENTS.md` 项目上下文。
 
 | 代理 | 角色 | 工具能力 | 使用场景 |
 |------|------|----------|----------|
@@ -50,7 +50,7 @@ description: >-
 
 - **单写者原则**：同一 cwd/worktree 一个写入者；并行写需 `worktree: true` 隔离。
 - **只读审查优先**：优先用 fresh 上下文 `reviewer` 审查，再由父代理合成并应用修复。
-- **子代理不擅自决策**：子代理遇不可逆、越权、架构/产品/发布/合并/安全等未批准决策，必须通过 `contact_supervisor` 上报，不自行决定（对齐 CLAUDE.md 的询问边界）。
+- **子代理不擅自决策**：子代理遇不可逆、越权、架构/产品/发布/合并/安全等未批准决策，必须通过 `contact_supervisor` 上报，不自行决定（对齐 AGENTS.md 的询问边界）。
 - **能力天花板保持**：子代理的工具限制与会话级 agent 限制不得放宽；普通 worker/reviewer 不再嵌套派生子代理。
 - **外部证据不越权**：receipt、CI、review bot、外部运行记录仅作证据，不构成合并/关闭/评论/发布/发布的授权。
 - **默认异步**：可独立推进的工作默认后台运行，不轮询等待；自适应门控在 workflowScript 内分支。
@@ -58,11 +58,11 @@ description: >-
 ## 五、上下文与工具
 
 - 子代理默认不继承 pi 全局 base prompt、项目指令与 skills 目录，需显式开启：`inheritProjectContext`（继承项目指令）、`inheritSkills`（继承 skills 目录）、`systemPromptMode: append`（追加 base prompt）。
-- 本项目 `.pi/agents/` 的子代理均开启 `inheritProjectContext: true`，自动遵循 `CLAUDE.md`。
+- 本项目 `.pi/agents/` 的子代理均开启 `inheritProjectContext: true`，自动遵循 `AGENTS.md`。
 - `tools` 为显式白名单时，命名扩展工具需另行加载其 provider；`mcp:` 直接选 MCP 工具需 `pi-mcp-adapter`。
 - 项目可复用 Skill 位于 `.pi/skills/{name}/SKILL.md`，按需通过 `skills` 字段选择注入。
 
 ## 六、验证与汇报
 
 - 子代理改动同样适用「任何可能改变行为的改动必须有验证」要求。
-- 主代理整合后按 CLAUDE.md 最终汇报格式汇报：改动、实际运行验证、提交信息、未解决风险；未提交或未运行测试时如实说明原因。
+- 主代理整合后按 AGENTS.md 最终汇报格式汇报：改动、实际运行验证、提交信息、未解决风险；未提交或未运行测试时如实说明原因。
