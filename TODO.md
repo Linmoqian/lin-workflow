@@ -56,3 +56,4 @@
 - [x] 沉淀 Tauri v2 官方开发文档为 tauri Skill
 - [x] 移除 overview 目录与 overview-maintenance Skill
 - [x] 新增文件层级组织 Skill
+- [x] 构建 pi 插件市场：package.json 包化与 marketplace 静态页

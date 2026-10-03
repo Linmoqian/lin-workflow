@@ -1,0 +1,15 @@
+{
+  "name": "lin-workflow",
+  "version": "0.1.0",
+  "description": "个人工程规范与 pi Skill 集合：工程流程、语言平台、研究工作流、写作与工具规范。",
+  "keywords": [
+    "pi-package"
+  ],
+  "private": true,
+  "license": "MIT",
+  "pi": {
+    "skills": [
+      ".pi/skills"
+    ]
+  }
+}

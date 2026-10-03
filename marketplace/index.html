@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>lin-workflow pi 插件市场</title>
+  <style>
+    :root {
+      --bg: #0f1115; --panel: #171a21; --border: #2a2f3a;
+      --text: #e6e8ec; --muted: #9aa3b2; --accent: #4f9cf7; --ok: #3fb96f;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg); color: var(--text);
+      font-family: "Segoe UI", "Microsoft YaHei", sans-serif;
+      line-height: 1.6; padding: 40px 20px; max-width: 1080px; margin: 0 auto;
+    }
+    header h1 { font-size: 1.6rem; margin-bottom: 4px; }
+    header p { color: var(--muted); font-size: 0.92rem; }
+    .install {
+      margin: 18px 0 8px; background: var(--panel); border: 1px solid var(--border);
+      border-radius: 8px; padding: 12px 16px; display: flex; align-items: center; gap: 12px;
+      flex-wrap: wrap;
+    }
+    .install code { color: var(--accent); font-size: 0.92rem; word-break: break-all; }
+    .install .count { color: var(--muted); font-size: 0.85rem; margin-left: auto; }
+    button {
+      background: var(--accent); color: #fff; border: none; border-radius: 5px;
+      padding: 4px 12px; cursor: pointer; font-size: 0.85rem;
+    }
+    button:hover { opacity: 0.88; }
+    button.copied { background: var(--ok); }
+    .search {
+      width: 100%; margin: 16px 0 24px; padding: 10px 14px; font-size: 0.95rem;
+      background: var(--panel); color: var(--text);
+      border: 1px solid var(--border); border-radius: 8px; outline: none;
+    }
+    .search:focus { border-color: var(--accent); }
+    h2.category {
+      font-size: 1.05rem; margin: 26px 0 12px; color: var(--accent);
+      border-bottom: 1px solid var(--border); padding-bottom: 6px;
+    }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 14px; }
+    .card {
+      background: var(--panel); border: 1px solid var(--border); border-radius: 8px;
+      padding: 14px 16px; display: flex; flex-direction: column; gap: 8px;
+    }
+    .card .name { font-family: Consolas, monospace; font-weight: 600; font-size: 0.95rem; }
+    .card .desc { color: var(--muted); font-size: 0.85rem; flex: 1; }
+    .card .actions { display: flex; gap: 8px; align-items: center; }
+    .card .actions span.hint { color: var(--muted); font-size: 0.78rem; }
+    #error { color: #e07a7a; margin-top: 40px; display: none; }
+    footer { margin-top: 40px; color: var(--muted); font-size: 0.82rem; }
+    footer a { color: var(--accent); text-decoration: none; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>lin-workflow · pi 插件市场</h1>
+    <p>个人工程规范与 pi Skill 集合，一条命令安装，按需启用单个 Skill。</p>
+  </header>
+
+  <div class="install">
+    <span>整包安装：</span><code id="installCmd">pi install git:github.com/Linmoqian/lin-workflow</code>
+    <button onclick="copyText('installCmd', this)">复制</button>
+    <span class="count" id="count"></span>
+  </div>
+
+  <input class="search" id="search" type="search" placeholder="搜索 Skill 名称或描述…">
+
+  <div id="content"></div>
+  <div id="error">加载 skills.json 失败：请通过 HTTP 访问（如 <code>python -m http.server</code>）或先运行 <code>marketplace/generate.ps1</code> 生成索引。</div>
+
+  <footer>
+    <p>单 Skill 启用：整包安装后在 settings 的 packages 条目中使用 <code>"skills": ["+名称"]</code> 过滤；来源 <a href="https://github.com/Linmoqian/lin-workflow" target="_blank">GitHub</a>，规范以仓库为准。</p>
+  </footer>
+
+  <script>
+    let allSkills = [];
+
+    function copyText(id, btn) {
+      const text = document.getElementById(id).textContent;
+      navigator.clipboard.writeText(text).then(() => {
+        const old = btn.textContent;
+        btn.textContent = "已复制"; btn.classList.add("copied");
+        setTimeout(() => { btn.textContent = old; btn.classList.remove("copied"); }, 1200);
+      });
+    }
+
+    function enableSnippet(name) {
+      return JSON.stringify({ packages: [{ source: "git:github.com/Linmoqian/lin-workflow", skills: ["+" + name] }] }, null, 2);
+    }
+
+    function copyEnable(name, btn) {
+      navigator.clipboard.writeText(enableSnippet(name)).then(() => {
+        const old = btn.textContent;
+        btn.textContent = "已复制"; btn.classList.add("copied");
+        setTimeout(() => { btn.textContent = old; btn.classList.remove("copied"); }, 1200);
+      });
+    }
+
+    function render(filter) {
+      const content = document.getElementById("content");
+      const kw = filter.trim().toLowerCase();
+      const groups = {};
+      allSkills
+        .filter(s => !kw || s.name.toLowerCase().includes(kw) || s.description.toLowerCase().includes(kw))
+        .forEach(s => { (groups[s.category] = groups[s.category] || []).push(s); });
+
+      content.innerHTML = "";
+      for (const [cat, list] of Object.entries(groups)) {
+        const h = document.createElement("h2");
+        h.className = "category"; h.textContent = cat + "（" + list.length + "）";
+        content.appendChild(h);
+        const grid = document.createElement("div"); grid.className = "grid";
+        list.forEach(s => {
+          const card = document.createElement("div"); card.className = "card";
+          const name = document.createElement("div"); name.className = "name"; name.textContent = s.name;
+          const desc = document.createElement("div"); desc.className = "desc"; desc.textContent = s.description;
+          const actions = document.createElement("div"); actions.className = "actions";
+          const btn = document.createElement("button"); btn.textContent = "复制单 Skill 启用配置";
+          btn.onclick = () => copyEnable(s.name, btn);
+          const hint = document.createElement("span"); hint.className = "hint";
+          hint.textContent = "粘贴到 ~/.pi/agent/settings.json";
+          actions.append(btn, hint);
+          card.append(name, desc, actions);
+          grid.appendChild(card);
+        });
+        content.appendChild(grid);
+      }
+    }
+
+    fetch("skills.json")
+      .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
+      .then(data => {
+        allSkills = data.skills;
+        document.getElementById("installCmd").textContent = data.install;
+        document.getElementById("count").textContent = data.count + " 个 Skill · 索引生成于 " + data.generatedAt;
+        render("");
+      })
+      .catch(() => { document.getElementById("error").style.display = "block"; });
+
+    document.getElementById("search").addEventListener("input", e => render(e.target.value));
+  </script>
+</body>
+</html>

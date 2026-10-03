@@ -1,0 +1,173 @@
+{
+  "generatedAt": "2026-10-03",
+  "source": "https://github.com/Linmoqian/lin-workflow",
+  "install": "pi install git:github.com/Linmoqian/lin-workflow",
+  "count": 33,
+  "skills": [
+    {
+      "name": "api-documentation",
+      "category": "质量与协作",
+      "description": "接口文档规范：前后端可调用可订阅契约、编写原则、固定文档格式、必须描述的契约要素、Tauri IPC 专项、后端 API 专项、事实来源同步与验证要求、可复制模板。新增或修改接口并同步文档时加载。"
+    },
+    {
+      "name": "cmake",
+      "category": "语言与平台",
+      "description": "CMake 规范：现代 CMake 以 target 为中心、target_compile_features 等命令用法、编译器警告、警告视为错误、第三方依赖接入。编写或修改 CMakeLists.txt 时加载。"
+    },
+    {
+      "name": "code-comments",
+      "category": "质量与协作",
+      "description": "代码注释规范：注释解释原因约束风险而非翻译实现、必须说明的内容、禁止事项、TODO 与 FIXME 约定、语言约定与评审要求。为代码编写注释或审查注释质量时加载。"
+    },
+    {
+      "name": "code-review",
+      "category": "工程流程",
+      "description": "代码 Review 规范：只读边界、规范依据、Review 流程、问题与风险分级、Review 报告模板与 docs/review 按日期落盘要求。执行代码 Review 或撰写 Review 报告时加载。"
+    },
+    {
+      "name": "concurrency",
+      "category": "质量与协作",
+      "description": "并发与线程规范：单线程默认原则、并发选择顺序、资源与背压、状态与同步、生命周期与错误处理、前端 Rust Python 并发模式、可观测性与测试。引入多线程、异步或并发结构前加载。"
+    },
+    {
+      "name": "cpp-dev",
+      "category": "语言与平台",
+      "description": "C++ 工程规范：语言版本与工具链、目录模块与依赖方向、命名格式、类型初始化与所有权、类与接口设计、错误处理、API/ABI 与跨语言边界、并发日志安全、构建依赖、静态检查 Sanitizer 与测试。修改 .cpp/.hpp 等C++代码或搭建 C++ 模块时加载。"
+    },
+    {
+      "name": "data-experiment",
+      "category": "研究与机器人",
+      "description": "数据与实验规范：生物、传感器、机器人采集与标注数据的分层目录、数据清单与最小元数据、血缘、采集与实验设计、数据质量统计、伦理与隐私、复现、保留策略。管理数据集、实验记录或数据处理流水线时加载。"
+    },
+    {
+      "name": "dependency-management",
+      "category": "工程流程",
+      "description": "依赖管理规范：包管理器统一使用 pnpm（JavaScript/TypeScript）与 uv（Python）、不混用 npm/yarn、不顺便升级或重写锁文件、pnpm dlx 临时执行、新增依赖前评估体积维护许可证安全与兼容性。新增、升级或移除项目依赖前加载。"
+    },
+    {
+      "name": "embedded-dev",
+      "category": "其他",
+      "description": "嵌入式开发规范：裸机、RTOS、MCU、SoC、驱动、固件、Bootloader 与 BSP 的分层目录、资源与内存预算、实时性时序、中断线程任务、硬件抽象驱动、看门狗与故障恢复、掉电安全、通信协议、功耗与固件更新。涉及嵌入式目标代码时加载，并与 cpp-dev 配合使用。"
+    },
+    {
+      "name": "external-tools",
+      "category": "写作与工具",
+      "description": "外部工具与资料查询规范：Context7 CLI 两步查询库/框架文档、MinerU 解析 PDF/扫描件/Office 等复杂文档、SciVerse 学术文献检索、MarkItDown 兜底转换，以及 API Key 请求边界与结果核验要求。查询第三方库或框架用法、解析复杂文档、检索学术文献或工具提示需要密钥时加载。"
+    },
+    {
+      "name": "file-organization",
+      "category": "工程流程",
+      "description": "文件层级组织规范：项目根目录布局与各类文件归属、按功能分类与按模块划分子目录、避免根目录堆积、子目录附带 README 与 .gitignore/.env.example、目录命名约定与迁移边界。创建文件或目录、决定文件放置位置、新增模块或整理项目结构时加载。"
+    },
+    {
+      "name": "frontend-dev",
+      "category": "语言与平台",
+      "description": "前端开发规范：TypeScript/JavaScript 遵循 Airbnb 风格与项目 ESLint/Prettier 配置，技术选型、状态管理、目录职责、样式复用、调试信息总线、自动化测试、桌面窗口交互与浏览器验证。开发或修改 app 前端代码、组件、样式或做浏览器验证时加载。"
+    },
+    {
+      "name": "git-workflow",
+      "category": "工程流程",
+      "description": "Git 工作流规范：工作区保护、精准暂存、提交前条件、中文 Conventional Commits 提交信息、本地提交与推送边界、.githooks 钩子启用。创建提交、处理暂存区或执行 Git 操作前加载。"
+    },
+    {
+      "name": "github-wiki",
+      "category": "工程流程",
+      "description": "GitHub Wiki 规范：定位与权威关系、权限协作边界、创建前规划、子模块注册与日常更新、克隆协作者同步、初始页面导航、页面命名与元信息、内容规范、Review 与发布前检查、弃用归档恢复。创建、编辑、同步、发布或归档 GitHub Wiki 前必须加载。"
+    },
+    {
+      "name": "github-workflow",
+      "category": "工程流程",
+      "description": "GitHub 规范：构建与 CI 最小检查、推送与拉取请求流程、发行与回滚、Wiki 边界。涉及 GitHub Actions、PR、Issue、Release 或远程仓库操作时加载。"
+    },
+    {
+      "name": "harmonyos-dev",
+      "category": "语言与平台",
+      "description": "HarmonyOS 开发规范：ArkTS/ETS 编译约束、devecocli 工具查询、HarmonyOS API 权限与依赖、资源与国际化、ArkUI 动画。开发或修改 HarmonyOS 应用时加载。"
+    },
+    {
+      "name": "hot-reload",
+      "category": "语言与平台",
+      "description": "前后端热加载规范：统一使用 pnpm tauri dev 入口、Vite HMR、Rust 自动重建与重启、devUrl 与端口一致性、验证方式与官方依据。调试前后端联调、热更新失效或开发服务器配置时加载。"
+    },
+    {
+      "name": "logging-terminal",
+      "category": "质量与协作",
+      "description": "日志与终端输出规范：终端语义提示与颜色规则、结构化日志分层、敏感信息处理、调试与异常、Debug 事件模型、结构化事件字段、关联 ID 与跨层回溯、日志级别与错误来源链。设计日志系统、添加日志或实现 CLI 终端输出时加载。"
+    },
+    {
+      "name": "ml-dev",
+      "category": "研究与机器人",
+      "description": "机器学习工程规范：资产与版本、数据划分与泄漏防护、训练运行、评测与结论、模型卡与限制、推理接口与运行时、发布灰度回滚、随机性漂移再训练、安全隐私与供应链。训练、评测、部署模型或修改模型代码时加载。"
+    },
+    {
+      "name": "project-engineering",
+      "category": "工程流程",
+      "description": ""
+    },
+    {
+      "name": "python-dev",
+      "category": "语言与平台",
+      "description": "Python 开发规范：PEP 8 与项目既有配置、Ruff 格式化与静态检查、命名约定、环境与依赖、并发、CLI 输出。编写或修改 Python 代码时加载。"
+    },
+    {
+      "name": "research-workflow",
+      "category": "研究与机器人",
+      "description": "组织生物学、机器学习、具身智能和软件工程中的科研工作，从研究问题、证据检索、实验设计、数据与模型管理， 到结果分析、论文或技术报告写作及 Review。适用于需要可复现、可核验、可追溯研究交付物的任务；不替代领域专家、伦理审批或安全审批。"
+    },
+    {
+      "name": "robotics",
+      "category": "研究与机器人",
+      "description": "具身智能与机器人系统规范：系统分层与依赖、单位坐标系时间、传感器与状态估计、执行器与控制回路、规划行为与任务状态机、并发消息实时性、日志回放可观测性、仿真实机安全边界、测试验收与 Review 检查。开发机器人感知、控制、规划或执行器相关代码时加载。"
+    },
+    {
+      "name": "rust-dev",
+      "category": "语言与平台",
+      "description": "Rust 与 Tauri 开发规范：rustfmt 惯例、目录与依赖方向、命名与代码组织、错误处理、异步并发与共享状态、安全边界、依赖管理、测试与提交前验证。修改 Rust 或 Tauri 桌面应用代码时加载。"
+    },
+    {
+      "name": "simulation-hil",
+      "category": "研究与机器人",
+      "description": "仿真、Sim2Real 与硬件在环规范：仿真层级与适用目标、版本来源可复现性、物理传感器执行器模型、场景测试用例、SIL 与回放、HIL 设计、Sim2Real 迁移、安全与故障注入、指标验收。搭建仿真环境、回放测试或实机迁移时加载。"
+    },
+    {
+      "name": "subagents",
+      "category": "质量与协作",
+      "description": "子代理使用规范：可用子代理清单、推荐编排、使用边界、约束与安全、上下文与工具、验证与汇报。需要拆分并行任务、选择子代理类型或编排多代理协作时加载。"
+    },
+    {
+      "name": "system-safety",
+      "category": "研究与机器人",
+      "description": "机器人与具身系统安全工程规范：安全目标与风险边界、危险分析与安全论证、安全状态转换、急停保护停机与物理防护、运行时监控、FMEA 与故障树、人员环境与人工接管、故障响应恢复、故障注入验证、变更发布检查。涉及动力执行器、移动设备、机械臂、人机协作或高风险现场运行时必须加载。"
+    },
+    {
+      "name": "tauri",
+      "category": "语言与平台",
+      "description": "Tauri v2 官方开发文档沉淀：tauri.conf.json 配置结构、命令与 IPC invoke、事件系统、窗口菜单托盘、官方插件体系、capabilities 权限与安全、构建分发与自动更新、CLI 命令。开发或调试 Tauri 桌面/移动应用、查 Tauri API 用法时加载；Rust 语言约束见 rust-dev，开发热加载见 hot-reload，前端栈选型见 frontend-dev。"
+    },
+    {
+      "name": "units-coordinate-time",
+      "category": "研究与机器人",
+      "description": "单位、坐标系与时间规范：单位约定、数值精度与特殊值、坐标系与姿态、标定与坐标变换、时间语义、时钟同步与数据对齐、接口存储日志中的数值表示、测试验证。处理传感器数值、姿态、时间戳或跨模块单位换算时加载。"
+    },
+    {
+      "name": "verification",
+      "category": "工程流程",
+      "description": "验证规范：必须验证的改动范围、验证原则、页面验证方式、自动化验证命令、验证记录与最终汇报要求。任何可能改变程序行为、构建、依赖、配置、数据格式或界面的改动完成后加载。"
+    },
+    {
+      "name": "windows-environment",
+      "category": "写作与工具",
+      "description": "Windows 工作环境规范：PowerShell 7 为默认 shell、UTF-8 与行尾保留、含空格路径引用、仅改大小写时的过渡文件名、PowerShell/CMD/Git Bash/WSL 语法差异与路径混用禁令、跨平台脚本约束。在 Windows 下执行命令、编写跨平台脚本或处理路径问题时加载。"
+    },
+    {
+      "name": "writing",
+      "category": "写作与工具",
+      "description": "通用写作规范：写作准备、事实与引用、结构与表达、目录命名与素材管理、文档与报告结构、文档解析与格式转换、审校交付，以及口水词与总结性结尾的禁令和平实语言要求。创建、改写或审校任何技术文档、报告、README 或交付文本时加载。"
+    },
+    {
+      "name": "writing-standard",
+      "category": "写作与工具",
+      "description": ""
+    }
+  ]
+}
