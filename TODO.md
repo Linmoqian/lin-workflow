@@ -67,3 +67,4 @@
 - [x] 根目录 package.json 预配置 dev/build/test 等命令并固化自检脚本
 - [x] tauri skill 沉淀安装包收集目录与命名规范
 - [x] skill 优化启动：writing 合并、120 行预算检查、writing-standard 引用清零
+- [x] skill 优化：13 个主文件拆分达标 120 行、writing 合并、路由抽测集与边界词

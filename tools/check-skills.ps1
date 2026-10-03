@@ -41,10 +41,13 @@ Write-Host "[成功] skill frontmatter 校验：$skillCount 个"
 # ---------- 2. 相对链接 ----------
 Get-ChildItem $skillsDir -Directory | ForEach-Object {
     $skillDir = $_.FullName
-    Select-String -Path (Join-Path $skillDir "SKILL.md") -Pattern "\]\((\.\./[a-z-]+/SKILL\.md)\)" -AllMatches | ForEach-Object {
-        $rel = $_.Matches[0].Groups[1].Value
-        if (-not (Test-Path (Join-Path $skillDir $rel))) {
-            Write-Host "[错误] $($_.Filename) -> $rel 不存在"; $fail++
+    $files = @((Join-Path $skillDir "SKILL.md")) + (Get-ChildItem (Join-Path $skillDir "references") -Filter *.md -ErrorAction SilentlyContinue | ForEach-Object { $_.FullName })
+    foreach ($f in $files) {
+        Select-String -Path $f -Pattern "\]\((\.\./[a-z-]+/SKILL\.md)\)" -AllMatches | ForEach-Object {
+            $rel = $_.Matches[0].Groups[1].Value
+            if (-not (Test-Path (Join-Path $skillDir $rel))) {
+                Write-Host "[错误] $($_.Filename) -> $rel 不存在（references 内需 ../../）"; $fail++
+            }
         }
     }
 }
