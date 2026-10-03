@@ -5,3 +5,4 @@
 [13:23] FEAT | .pi/skills | logging-terminal 实现速查补日志系统起步配置：RotatingFileHandler 轮转与保留上限示例
 [13:25] FEAT | .pi/skills | tauri skill 补安装包收集与命名规范：统一目录 dist/installers 与 product_version_os_arch 命名
 [13:32] FEAT | .pi/skills | 按 writing 规范审查全部 skill 表达：口水词与总结结尾零命中，统一 description 格式并打磨三处
+[17:07] REFACTOR | .pi/skills | writing 与 writing-standard 合并为一个 skill，check-skills 新增 120 行主文件预算检查

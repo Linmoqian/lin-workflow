@@ -13,7 +13,7 @@ description: >-
 
 先读取根目录 `AGENTS.md`、`CLAUDE.md` 和 `TODO.md`。根据任务实际范围读取专题规范，不得凭记忆替代规范：
 
-- 写作或论文交付：[写作规范](../writing/SKILL.md)和项目 `writing-standard` Skill。
+- 写作或论文交付：[写作规范](../writing/SKILL.md)，LaTeX 与 PDF 交付遵循其 references/latex.md。
 - 数据、实验或生物样本：[数据与实验规范](../data-experiment/SKILL.md)。
 - 训练、评测或推理：[机器学习规范](../ml-dev/SKILL.md)。
 - 机器人、控制、传感器或执行器：[具身智能与机器人规范](../robotics/SKILL.md)。
@@ -116,7 +116,7 @@ description: >-
 
 ### 4.6 写作与交付
 
-根据读者选择 Markdown、LaTeX 或 PDF；遵循[写作规范](../writing/SKILL.md)和 `writing-standard` Skill。正式文稿至少包含：研究问题与范围、方法和数据、结果、限制、复现入口、伦理/安全说明（适用时）和参考文献。
+根据读者选择 Markdown、LaTeX 或 PDF；遵循[写作规范](../writing/SKILL.md)。正式文稿至少包含：研究问题与范围、方法和数据、结果、限制、复现入口、伦理/安全说明（适用时）和参考文献。
 
 写作时建立主张—证据矩阵：
 

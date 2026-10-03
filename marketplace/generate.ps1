@@ -45,7 +45,6 @@ $categoryMap = @{
     "system-safety"         = "研究与机器人"
     "units-coordinate-time" = "研究与机器人"
     "writing"               = "写作与工具"
-    "writing-standard"      = "写作与工具"
     "external-tools"        = "写作与工具"
     "windows-environment"   = "写作与工具"
 }

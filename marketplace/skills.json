@@ -2,7 +2,7 @@
   "generatedAt": "2026-10-03",
   "source": "https://github.com/Linmoqian/lin-workflow",
   "install": "pi install git:github.com/Linmoqian/lin-workflow",
-  "count": 35,
+  "count": 34,
   "skills": [
     {
       "name": "api-documentation",
@@ -173,11 +173,6 @@
       "name": "writing",
       "category": "写作与工具",
       "description": "通用写作规范：写作准备、事实与引用、结构与表达、目录命名与素材管理、文档与报告结构、文档解析与格式转换、审校交付，以及口水词与总结性结尾的禁令和平实语言要求。创建、改写或审校任何技术文档、报告、README 或交付文本时加载。"
-    },
-    {
-      "name": "writing-standard",
-      "category": "写作与工具",
-      "description": "写作交付工作流：目录与素材管理、文档工作流程、LaTeX 与 PDF 交付核验。创建、改写或审校技术文档、报告，或需要导出 PDF 的 LaTeX 文档时加载；通用表达与禁令细则见 writing。"
     }
   ]
 }

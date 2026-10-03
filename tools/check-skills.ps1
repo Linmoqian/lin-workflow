@@ -15,6 +15,14 @@ $skillsDir = Join-Path $repoRoot ".pi/skills"
 $agentsDir = Join-Path $repoRoot ".pi/agents"
 $fail = 0
 
+# ---------- 0. 主文件行数预算 ----------
+$budget = 120
+Get-ChildItem $skillsDir -Directory | ForEach-Object {
+    $lines = (Get-Content (Join-Path $_.FullName "SKILL.md") -ErrorAction SilentlyContinue).Count
+    if ($lines -gt $budget) { Write-Host "[错误] $($_.Name) 主文件 $lines 行超出预算 $budget（超出部分拆 references/）"; $fail++ }
+}
+Write-Host "[成功] 主文件行数预算检查（≤ $budget 行）"
+
 # ---------- 1. skill frontmatter ----------
 $skillCount = 0
 Get-ChildItem $skillsDir -Directory | ForEach-Object {
