@@ -1,2 +1,3 @@
-# 项目级 Pi 运行时产物
+# 项目级 Pi 运行时产物（tasks 会话任务、extensions 含 .env 密钥）
 .pi/tasks/
+.pi/extensions/
