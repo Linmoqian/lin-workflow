@@ -10,18 +10,12 @@ description: 按本仓库工程规范安全地实施代码、配置、文档、�
 ## 读取规范
 
 1. 遵循仓库根目录 [AGENTS.md](../../../AGENTS.md) 的通用约束与红线。
-2. 涉及具体技术栈、流程或工具时，按需读取 `.pi/skills/` 下对应专题 Skill 的 `SKILL.md`，例如 `cpp-dev`、`python-dev`、`verification`、`git-workflow`、`dependency-management`、`external-tools`、`windows-environment`。
+2. 涉及具体技术栈、流程或工具时，按需读取 `.pi/skills/` 下对应专题 Skill 的 `SKILL.md`，例如 `cpp-dev`、`python-dev`、`verification`、`git-workflow`、`dependency-management`、`file-organization`、`external-tools`、`windows-environment`。
 3. 查找当前目录及子目录中的更具体规范；其优先级高于通用规范。
 
 ## 根目录布局
 
-* `app/` 存放项目主体代码。
-* `docs/` 存放开发文档和开发日志；`docs/wiki/` 是 GitHub Wiki 子模块挂载点（仅在仓库地址确认后创建）；`docs/api/`、`docs/review/` 按需存放实际接口文档与 Review 报告，不创建空目录。
-* `.githooks/` 存放版本控制的 Git 提交钩子；克隆后运行 `.githooks/setup.ps1` 启用。
-* `.pi/skills/` 存放全部工程规范 Skill；`.pi/agents/` 存放子代理定义。
-* `tests/` 存放跨技术栈测试和验收测试；语言工具链约定的测试放在对应 crate 或模块内。
-* 按功能分类、按模块划分子目录，避免在根目录堆积文件；子目录附带简短 `README.md`、必要的 `.gitignore` 与 `.env.example`。
-* 迁移或重命名现有目录前，必须先获得工程师同意。
+根目录布局、文件归属判断与层级组织原则遵循 `file-organization` Skill；新增文件先按其归属规则放置，迁移或重命名现有目录前必须先获得工程师同意。
 
 ## 实施流程
 
