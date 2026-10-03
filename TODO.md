@@ -54,3 +54,4 @@
 - [x] 将 GitHub Wiki 子模块挂载与同步流程纳入规范
 - [x] 将 AGENTS 与 docs 全部规范沉淀为 .pi/skills Skill 并瘦身入口文档
 - [x] 沉淀 Tauri v2 官方开发文档为 tauri Skill
+- [x] 移除 overview 目录与 overview-maintenance Skill
