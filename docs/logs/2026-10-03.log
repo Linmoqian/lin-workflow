@@ -1,2 +1,3 @@
 [13:15] FEAT | .pi/skills | 沉淀 dev-log 开发日志习惯 Skill：log 按日/CSV 按月双载体、类型枚举、与 TODO 及提交信息边界
 [13:19] FEAT | .pi/skills | logging-terminal 补实现速查节：ANSI 码表与 Python/PowerShell 最小示例，颜色习惯不另立 skill
+[13:20] FEAT | .pi/skills | 沉淀 cli-conventions 无参数 CLI 输入习惯 Skill：交互问答/配置/环境变量/管道传值

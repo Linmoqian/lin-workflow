@@ -23,6 +23,7 @@ $categoryMap = @{
     "dependency-management" = "工程流程"
     "file-organization"     = "工程流程"
     "dev-log"               = "工程流程"
+    "cli-conventions"       = "工程流程"
     "python-dev"            = "语言与平台"
     "rust-dev"              = "语言与平台"
     "cpp-dev"               = "语言与平台"

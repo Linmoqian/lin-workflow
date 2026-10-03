@@ -63,3 +63,4 @@
 - [x] 安装器全平台化：pi/Codex/Claude Code/dsh/project 多目标与 bash 跨平台版；extensions 入库并隔离 .env
 - [x] 沉淀 dev-log 开发日志习惯 Skill（log/CSV 双载体）
 - [x] logging-terminal 补终端颜色实现速查（ANSI 码表与双语言示例）
+- [x] 沉淀 cli-conventions 无参数 CLI 输入习惯 Skill

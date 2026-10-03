@@ -2,12 +2,17 @@
   "generatedAt": "2026-10-03",
   "source": "https://github.com/Linmoqian/lin-workflow",
   "install": "pi install git:github.com/Linmoqian/lin-workflow",
-  "count": 34,
+  "count": 35,
   "skills": [
     {
       "name": "api-documentation",
       "category": "质量与协作",
       "description": "接口文档规范：前后端可调用可订阅契约、编写原则、固定文档格式、必须描述的契约要素、Tauri IPC 专项、后端 API 专项、事实来源同步与验证要求、可复制模板。新增或修改接口并同步文档时加载。"
+    },
+    {
+      "name": "cli-conventions",
+      "category": "工程流程",
+      "description": "CLI 命令输入习惯：命令不带参数直接运行，数据经交互式问答（带默认值）、配置文件、环境变量或管道传入，避免参数值进入 shell 历史与进程列表、规避引号转义与中文路径问题；非交互环境兜底与例外场景。开发命令行工具、脚本入口或 main 函数时加载。"
     },
     {
       "name": "cmake",
