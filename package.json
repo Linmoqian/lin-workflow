@@ -7,6 +7,13 @@
   ],
   "private": true,
   "license": "MIT",
+  "scripts": {
+    "dev": "python -m http.server 8000",
+    "build": "pwsh -NoProfile -File marketplace/generate.ps1",
+    "test": "pwsh -NoProfile -File tools/check-skills.ps1",
+    "skills:install": "pwsh -NoProfile -File marketplace/install.ps1",
+    "agents:install": "pwsh -NoProfile -File marketplace/install.ps1 -Agents"
+  },
   "pi": {
     "skills": [
       ".pi/skills"
