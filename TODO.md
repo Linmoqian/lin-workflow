@@ -62,3 +62,4 @@
 - [x] 完善子代理：AGENTS.md 主引用、skill 按需加载指引、补 test_pilot 与 pwsh_exec 工具
 - [x] 安装器全平台化：pi/Codex/Claude Code/dsh/project 多目标与 bash 跨平台版；extensions 入库并隔离 .env
 - [x] 沉淀 dev-log 开发日志习惯 Skill（log/CSV 双载体）
+- [x] logging-terminal 补终端颜色实现速查（ANSI 码表与双语言示例）

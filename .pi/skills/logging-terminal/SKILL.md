@@ -258,3 +258,45 @@ Rust/Tauri：
 - [GitHub 规范](../github-workflow/SKILL.md)：CI、发行日志和 Secret 脱敏。
 - [代码 Review](../code-review/SKILL.md)：日志专项审查与风险报告。
 - [验证](../verification/SKILL.md)：日志验证和未覆盖范围记录。
+
+## 13. 实现速查
+
+颜色语义（第 3 节）的最小落地参考；业务代码仍禁止硬编码颜色，优先经终端层语义动作（第 2 节）间接着色。
+
+ANSI 前景色：绿 `32`、黄 `33`、红 `31`、青 `36`、蓝 `34`、灰 `90`；重置 `0`。包裹形式 `\e[{code}m文本\e[0m`。
+
+启用前同时检测：输出是否 TTY、`NO_COLOR` 是否设置、是否 CI 或重定向；任一命中则输出稳定纯文本。
+
+Python（CLI 脚本）：
+
+```python
+import os
+import sys
+
+TTY = sys.stdout.isatty() and "NO_COLOR" not in os.environ
+
+def say(tag: str, text: str, code: int) -> None:
+    line = f"[{tag}] {text}"
+    print(f"\033[{code}m{line}\033[0m" if TTY else line)
+
+say("成功", "构建完成", 32)
+say("警告", "依赖版本偏低", 33)
+say("错误", "测试失败", 31)
+```
+
+PowerShell 7（服务端/工具脚本）：
+
+```powershell
+$tty = $Host.Name -eq "ConsoleHost" -and -not [Console]::IsOutputRedirected -and -not $env:NO_COLOR
+
+function Say([string]$Tag, [string]$Text, [ConsoleColor]$Color) {
+    $line = "[$Tag] $Text"
+    if ($tty) { Write-Host $line -ForegroundColor $Color } else { Write-Output $line }
+}
+
+Say "成功" "构建完成" Green
+Say "警告" "依赖版本偏低" Yellow
+Say "错误" "测试失败" Red
+```
+
+要点：文字标签 `[成功]`/`[警告]`/`[错误]` 必须随行输出，颜色只是增强；去色后行内容不变。
