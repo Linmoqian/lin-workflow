@@ -300,3 +300,23 @@ Say "错误" "测试失败" Red
 ```
 
 要点：文字标签 `[成功]`/`[警告]`/`[错误]` 必须随行输出，颜色只是增强；去色后行内容不变。
+
+日志系统起步（Python 标准库，按大小轮转 + 保留上限，满足「不无限叠加」的最小配置）：
+
+```python
+import logging
+from logging.handlers import RotatingFileHandler
+
+handler = RotatingFileHandler(
+    "app.log", maxBytes=5 * 1024 * 1024,  # 单文件 5 MB
+    backupCount=3, encoding="utf-8"        # 最多保留 3 个历史文件，共约 20 MB 封顶
+)
+handler.setFormatter(logging.Formatter(
+    "%(asctime)s %(levelname)s %(name)s %(message)s"
+))
+logger = logging.getLogger("app")
+logger.addHandler(handler)
+logger.setLevel(logging.INFO)  # debug 默认关闭，排查时再开
+```
+
+长期服务按日期轮转换用 `TimedRotatingFileHandler(when="midnight", backupCount=14)`；结构化需求升级时改用 JSON Lines 输出，字段遵循第 4 节。

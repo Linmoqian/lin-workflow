@@ -2,3 +2,4 @@
 [13:19] FEAT | .pi/skills | logging-terminal 补实现速查节：ANSI 码表与 Python/PowerShell 最小示例，颜色习惯不另立 skill
 [13:20] FEAT | .pi/skills | 沉淀 cli-conventions 无参数 CLI 输入习惯 Skill：交互问答/配置/环境变量/管道传值
 [13:22] FEAT | package.json | 根目录预配置 pnpm dev/build/test/skills:install 命令，固化 tools/check-skills.ps1 自检
+[13:23] FEAT | .pi/skills | logging-terminal 实现速查补日志系统起步配置：RotatingFileHandler 轮转与保留上限示例
